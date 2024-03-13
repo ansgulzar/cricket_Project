@@ -1,0 +1,1349 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+{% block logout %}
+              <button  class="btn login-btn-links">
+                  <a href="{% url 'loginview' %}">
+                       <span class="m-0 oipn">
+                         <img src="{% static 'cricketlive/images/747376.png' %}" alt="pnm">
+                        </span>
+                  </a>
+              </button>
+{% endblock logout %}
+{% block sub_banner %}.{% endblock sub_banner %}
+{% block content %}
+<section class="float-start w-100 banner-part">
+
+      <div class="slider-banner">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item add-fiu active">
+              <img src="{% static 'cricketlive/images/banh1.jpg' %}" alt="images not found">
+
+
+
+                <div class="container position-relative">
+                  <div class="cover">
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="header-content">
+                            <h1 class="fadeInDown animated">
+                              Post Match Shenanigans ft. Shubman Gill | India vs Bangladesh
+                            </h1>
+
+                            <p class="mt-3"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                              Lorem Ipsum has been the industry's standard dummy
+                            </p>
+
+                            <a href="{% url 'live' %}" class="btn btn-comon-btn">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg> Watch Live Matches
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                  </div>
+
+                </div>
+            </div>
+            <div class="carousel-item add-fiu">
+              <img src="{% static 'cricketlive/images/ban012.jpg' %}" alt="images not found">
+
+
+                <div class="container position-relative">
+                    <div class="cover">
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="header-content">
+                            <h1 class="fadeInDown animated">
+                              Post Match Shenanigans ft. Shubman Gill | India vs Bangladesh
+                            </h1>
+
+                            <p class="mt-3"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                              Lorem Ipsum has been the industry's standard dummy
+                            </p>
+
+                            <a href="{% url 'live' %}" class="btn btn-comon-btn">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg> Watch Live Matches
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+<section class="float-start w-100 body-part pt-0">
+
+   <div class="match-cover01 d-inline-block w-100">
+       <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <h2 class="main-hed01"> Match Coverage </h2>
+            <a href="{% url 'videos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+        </div>
+
+           <div class="coverages-slider  owl-carousel owl-theme mt-4">
+               {% for item in great_innings %}
+
+               <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" class="items-cover0 d-inline-block w-100">
+                  <div class="imghj">
+                     <img alt="ty" style="object-fit: contain" src="{{item.thumbnail}}"/>
+                  </div>
+                  <div class="details-text">
+                     <h5> {{item.title}} </h5>
+                     <p> {{item.video_date}} <span> Admin </span></p>
+                  </div>
+                </a>
+               {% endfor %}
+
+           </div>
+           <a href="{% url 'videos' %}" class="btn btn-asee d-table d-md-none mx-auto mt-4" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+       </div>
+   </div>
+
+   <div class="newsli-div d-inline-block w-100">
+       <div class="container">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="main-hed01"> Latest News </h2>
+              <a href="{% url 'news' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> More News <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+          </div>
+          <div class="row mt-0 gy-5 g-lg-4">
+             <div class="col-lg-6">
+                <a href="{% url 'news_details' pk=news1.id %}" class="comon-ret big-ret d-inline-block w-100">
+                    <div class="imh-news position-relative">
+                       <img alt="sty" src="{{news1.poster}}"/>
+                       <span class="btn btn-matech-r"> Match Report </span>
+                    </div>
+                    <div class="nes-text">
+                       <h5> {{news1.title}}</h5>
+                       <p> {{news1.subtitle}} </p>
+                       <h6> {{news1.date}}  By Author </h6>
+                    </div>
+                </a>
+             </div>
+             <div class="col-lg-6">
+                <div class="row row-cols-1 row-cols-sm-2 gy-5 g-lg-4">
+                    {% for item in news %}
+                    <div class="col">
+                      <a href="{% url 'news_details' pk=item.id %}" class="comon-ret d-inline-block w-100">
+                        <div class="imh-news">
+                           <img alt="sty" src="{{item.poster}}"/>
+                        </div>
+                        <div class="nes-text">
+                           <h5> {{item.title}} </h5>
+
+                           <h6> {{item.date}}  By Author </h6>
+                        </div>
+                      </a>
+                    </div>
+                    {% endfor %}
+                </div>
+             </div>
+          </div>
+           <a href="{% url 'news' %}" class="btn btn-asee d-table d-md-none mx-auto mt-4" style="font-style: oblique"> More News <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+       </div>
+   </div>
+
+   <div class="video-section d-inline-block w-100">
+       <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <h2 class="main-hed01"> Latest Videos </h2>
+                <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> More Videos <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+            </div>
+            <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                {% for item in latest %}
+                <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                      <img alt="su" src="{{item.thumbnail}}"/>
+                      <span class="btn"> <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg> Play </span>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}}</h5>
+                      <p>  {{item.video_date}}</p>
+                   </div>
+                </a>
+                {% endfor %}
+            </div>
+
+            <a href="#" class="btn btn-asee  d-table d-md-none mx-auto mt-4"> More Videos <i class="fas fa-angle-right"></i> </a>
+       </div>
+   </div>
+
+   <div class="top-list-turnament">
+
+    <div class="container">
+
+         <div class="d-flex align-items-center justify-content-between">
+          <h2 class="main-hed01"> Upcoming Match </h2>
+             <a href="{% url 'match' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> More Match <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+        </div>
+
+             <div class="upcomin-matches owl-carousel owl-theme">
+                 {% for match in matches %}
+                 <div class="comon-matchbn">
+                    <a href="#" class="topikn-div">
+                      <div class="top-bg-backgrouh">
+                        <figure>
+                          <img src="{% static 'cricketlive/images/st01.jpg' %}" alt="pnhm"/>
+                        </figure>
+                        <div class="conty">
+
+                        <h4 class="text-center lega-text mt-0 mb-2">{{match.league_name}}</h4>
+                        <span class="btn time-d05 d-table mx-auto"> {{match.event_date_start}} {{match.event_time}}</span>
+                        <h6 class="text-center text-white mb-3">{{match.event_stadium}}</h6>
+                       </div>
+                      </div>
+
+                      <div class="row align-items-center mt-4  justify-content-center">
+                        <div class="col-5">
+                            <div class="cul-div">
+                                <figure class="">
+                                    <img src="{{match.event_home_team_logo}}" alt="club">
+                                </figure>
+                                <h6 class="text-center">
+
+                                  {{match.event_home_team}}
+                                </h6>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <h1 class="vs-text"> VS </h1>
+                        </div>
+                        <div class="col-5">
+
+                          <div class="cul-div">
+
+                            <figure class="">
+                                <img src="{{match.event_away_team_logo}}" alt="club">
+                            </figure>
+
+                            <h6 class="text-center">
+                              {{match.event_away_team}}
+                            </h6>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                    <div class="more-details-div text-center">
+
+                       <a href="{% url 'details' pk=match.event_key %}" class="btn btn-book-btn"> Details  <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                       </span> </a>
+                    </div>
+
+                </div>
+                 {% endfor %}
+                </div>
+             </div>
+       <a href="{% url 'match' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> More Match <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+    </div>
+
+   </div>
+
+   <div class="leadr-board d-inline-block w-100">
+      <div class="container">
+          <div class="d-md-flex align-items-center justify-content-between">
+            <h2 class="main-hed01"> Leaderboards </h2>
+
+            <ul class="nav nav-pills mb-3 mt-4 mt-md-0" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#odi" type="button" role="tab">ODI</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#t20" type="button" role="tab" >T20</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#test" type="button" role="tab">Test</button>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="odi" role="tabpanel">
+              <div class="coverages-slider owl-carousel owl-theme mt-4">
+                <div class="comon-teams-poins d-inline-block w-100">
+                    <h5> <span class="noi">1</span>
+                      India
+                    </h5>
+                    <figure>
+                      <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                    </figure>
+                    <hr/>
+                    <ul class="d-flex align-items-center justify-content-between">
+                      <li>
+                        <span> 56 </span>
+                        <span> Played </span>
+                      </li>
+                      <li>
+                        <span> 6800 </span>
+                        <span> Points </span>
+                      </li>
+                      <li>
+                        <span> 121 </span>
+                        <span> Rating </span>
+                      </li>
+                    </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6>No.1 team in the world in ODI format</h6>
+                         </ul>
+                    </div>
+                </div>
+
+                <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 42 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4926 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 117 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in ODI format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        South Africa
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555604.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 35 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3821 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 109 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in ODI format</h6>
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        Pakistan
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555648.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 36 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3922 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 109 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in ODI format</h6>
+
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 44 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4536 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 103 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in ODI format</h6>
+                         </ul>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="t20" role="tabpanel">
+              <div class="coverages-slider owl-carousel owl-theme mt-4">
+                 <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">1</span>
+                        India
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 68 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 18,041 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 265 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> No.1 best team in the world in T20 format</h6>
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        England
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555527.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 46 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 11,816 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 257 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in T20 format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 53 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 13,534</span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 255 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in T20 format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        Pakistan
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555648.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 53 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 13,325 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 251 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in T20 format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 39 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 9,760 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 250 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in T20 format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="test" role="tabpanel">
+              <div class="coverages-slider owl-carousel owl-theme mt-4">
+
+                <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">1</span>
+                        India
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 29 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3,434 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 118 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> No.1 best team in the world in Test format</h6>
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 30 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3,534 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 118 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in Test format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        England
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555527.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 43 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4,941 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 115 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in Test format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        South Africa
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555604.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 21 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 2,182 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 104 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in Test format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 26 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 2,471 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 95 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in Test format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+          <a href="{% url 'stats' %}" class="btn btn-asee" style="font-style: oblique"> Full Leaderboards <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+
+      </div>
+   </div>
+
+   <div class="helights d-inline-block w-100">
+       <div class="container">
+        <h2 class="main-hed01"> Match highlight </h2>
+          <div class="row mt-4">
+              <div class="col-lg-8">
+                  <div class="big-viuy d-inline-block w-100">
+                    <video id="videoplaylist" poster="{{highlights.1.thumbnail}}" controls="">
+                        <source src="{{highlights.1.video_url}}" type="video/mp4">
+                    </video>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                <ul id="playlist">
+                  {% for item in highlights|slice:":4" %}
+                  <li>
+                     <a href="{{item.video_url}}" class="voi-paly">
+                        <div class="imgh-voi">
+                            <img alt="syiu" src="{{item.thumbnail}}"/>
+                        </div>
+                        <div class="img-detau">
+                           <h5>  {{item.title}} </h5>
+                           <p>  </p>
+                        </div>
+                     </a>
+                  </li>
+                    {% endfor %}
+                </ul>
+              </div>
+          </div>
+       </div>
+   </div>
+
+    <div class="match-result-div">
+
+        <div class="container">
+
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="main-hed01 text-white"> Latest Match Result </h2>
+              <a href="{% url 'match' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique; color: white"> More Result <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+          </div>
+                <div class="result-sliden owl-carousel owl-theme mt-4">
+                  {% for match in matchess %}
+                  <div class="comon-results-div">
+                    <div class="leag-name text-center">
+                      <h2>{{match.league_name}} </h2>
+                      <p class="wintc">{{match.event_status_info}}</p>
+                    </div>
+                    <div class="bodyu-divbn">
+
+                      <div class="comr-teams d-flex align-items-center justify-content-center">
+                          <span class="fli-iom">
+                             <img alt="su" src="{{match.event_home_team_logo}}"/>
+                          </span>
+                          <h5 class="na-text"> {{match.event_home_team}}
+                            <span class="d-block"> {{match.event_home_final_result}}
+<!--                              <small> (15.0 OV)</small>-->
+                            </span>
+                          </h5>
+                      </div>
+
+                      <div class="vhs text-center">
+                         <img alt="su" src="{% static 'cricketlive/images/versus.png' %}"/>
+                      </div>
+                      <div class="comr-teams d-flex align-items-center justify-content-center">
+                        <span class="fli-iom">
+                           <img alt="su" src="{{match.event_away_team_logo}}"/>
+                        </span>
+                        <h5 class="na-text"> {{match.event_away_team}}
+                          <span class="d-block"> {{match.event_away_final_result}}
+<!--                            <small> (15.0 OV)</small>-->
+                          </span>
+                        </h5>
+                      </div>
+
+                      <div class="d-lg-none d-block">
+                        <div class="vds-resut text-center my-4">
+                          <div class="golas-divb mb-2">
+                              <h3>02 : 01</h3>
+                          </div>
+                          <div class="watch-div">
+                             <a href="#" class="btn btn-wtch1">
+                              <i class="fas fa-play"></i> Match Highlights
+                             </a>
+                             <p class="mt-2 text-white"> <i class="fas fa-map-marker-alt"></i> {{match.event_stadium}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h6 class="text-center mt-4"> {{match.event_stadium}}</h6>
+                      <p class="text-center mt-2"> {{match.event_date_start}}, {{match.event_time}} </p>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button style="background: #FFC72C; height: 40px; width: 100px; border:#FFC72C; border-radius: 6px;"><a href="{% url 'details' pk=match.event_key %}">Details</a></button>
+                    </div>
+
+                  </div>
+                  {% endfor %}
+                </div>
+            <a href="{% url 'match' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique; color: white"> More Result <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+        </div>
+    </div>
+
+    <div class="statisci-players d-inline-block w-100">
+      <div class="container">
+
+           <div class="d-flex align-items-center justify-content-between">
+            <h2 class="main-hed01"> Players Ratings </h2>
+               <a href="{% url 'stats' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> More Ratings <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+           </div>
+           <div class="slider-sertu owl-carousel owl-theme mt-4">
+              <div class="items-plays">
+                    <figure class="mx-auto">
+                      <img src="{% static 'cricketlive/images/108.png' %}" alt="pmy"/>
+                    </figure>
+                    <div class="details-divn">
+                        <h5> Suryakumar yadav 1 </h5>
+                        <hr class="bg-light"/>
+                        <ul>
+                          <li>
+                            <span class="rtus">Role</span>
+                            <span>Batsman</span>
+                          </li>
+                          <li>
+                            <span class="rtus">Bats</span>
+                            <span>Right-Handed</span>
+                          </li>
+                          <li>
+                            <span class="rtus">Bowls</span>
+                            <span>Right-Arm Medium Seam</span>
+                          </li>
+                        </ul>
+
+                        <h5 class="mt-4"> 2022 Season </h5>
+                        <div class="row row-cols-3 mt-3">
+                          <div class="col">
+                              <div class="rtyu">
+                                  <h4> Rating </h4>
+                                  <h2>863</h2>
+                              </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="rtyu">
+                              <h4> Matches </h4>
+                              <h2>45</h2>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="rtyu">
+                              <h4> Runs </h4>
+                              <h2>1578</h2>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+              </div>
+
+              <div class="items-plays">
+                <figure class="mx-auto">
+                  <img src="{% static 'cricketlive/images/1201.png' %}" alt="pmy"/>
+                </figure>
+                <div class="details-divn">
+                    <h5> Muhammad Rizwan 2 </h5>
+                    <hr class="bg-light"/>
+                    <ul>
+                      <li>
+                        <span class="rtus">Role</span>
+                        <span>Batsman</span>
+                      </li>
+                      <li>
+                        <span class="rtus">Bats</span>
+                        <span>Right-Handed</span>
+                      </li>
+                      <li>
+                        <span class="rtus">Wicket keeper</span>
+                        <span> best wicket keeper </span>
+                      </li>
+                    </ul>
+
+                    <h5 class="mt-4"> 2022 Season </h5>
+                    <div class="row row-cols-3 mt-3">
+                      <div class="col">
+                          <div class="rtyu">
+                              <h4> Ranking </h4>
+                              <h2>787</h2>
+                          </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="rtyu">
+                          <h4> Matches </h4>
+                          <h2>85</h2>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="rtyu">
+                          <h4> Runs </h4>
+                          <h2>2797</h2>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+              <div class="items-plays">
+                   <figure class="mx-auto">
+                       <img src="{% static 'cricketlive/images/1667.png' %}" alt="pmy"/>
+                   </figure>
+                   <div class="details-divn">
+                       <h5> Aden Makarm 3 </h5>
+                       <hr class="bg-light"/>
+                       <ul>
+                           <li>
+                               <span class="rtus">Role</span>
+                               <span>Batsman</span>
+                           </li>
+                           <li>
+                               <span class="rtus">Bats</span>
+                               <span>Right-Handed</span>
+                           </li>
+                           <li>
+                               <span class="rtus">Bowls</span>
+                               <span>Right-Arm Off Spin</span>
+                           </li>
+                       </ul>
+                       <h5 class="mt-4"> 2022 Season </h5>
+                       <div class="row row-cols-3 mt-3">
+                           <div class="col">
+                               <div class="rtyu">
+                                   <h4> Ratting </h4>
+                                   <h2> 756 </h2>
+                               </div>
+                           </div>
+                           <div class="col">
+                               <div class="rtyu">
+                                   <h4> Matches </h4>
+                                   <h2>37</h2>
+                               </div>
+                           </div>
+                           <div class="col">
+                               <div class="rtyu">
+                                   <h4> Runs </h4>
+                                   <h2>1063</h2>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+          <a href="#" class="btn btn-asee d-table d-md-none mx-auto mt-4"> More Ratings <i class="fas fa-angle-right"></i> </a>
+      </div>
+   </div>
+
+    <div class="mediasection d-inline-block w-100">
+      <div class="container">
+        <h2 class="main-hed01"> Magic Moments </h2>
+        <div class="row row-cols-1 row-cols-lg-2 gy-4 mt-1">
+           <div class="col">
+              <a href="{% url 'videoplayer' pk=magical1.video_url title=magical1.title %}" class="comon-links-divb05 bigo1-imgh">
+                 <figure>
+                    <img style="object-fit: fill;" src="{{magical1.thumbnail}}" alt="pbnm"/>
+                    <figcaption>
+                      {{magical1.title}}
+                    </figcaption>
+                 </figure>
+              </a>
+           </div>
+
+
+           <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 gy-4">
+                 {% for item in magical|slice:":4" %}
+              <div class="col">
+                <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" class="comon-links-divb05">
+                        <div class="imgh-voi">
+                            <img alt="syiu" src="{{item.thumbnail}}"/>
+                        </div>
+                    <br>
+                        <div class="img-detau">
+                           <h5>  {{item.title}} </h5>
+                           <p>  </p>
+                        </div>
+                 </a>
+              </div>
+                {% endfor %}
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+{% endblock content %}
+{% block jslink_home %}<script src="{% static 'cricketlive/js/logic.js' %}"></script>{% endblock jslink_home %}
+{% block js %}
+<script>
+  $(document).ready(function(){
+    $('.upcomin-matches').owlCarousel({
+      loop: true,
+      margin:50,
+      autoplay:true,
+      nav:false,
+      dots:true,
+      responsive: {
+          0: {
+              items:1
+          },
+          600: {
+              items:1
+          },
+          667: {
+            items:2
+          },
+          820: {
+            items:2
+          },
+          1000: {
+              items:2
+          },
+          1180: {
+            items:2
+          },
+          1200: {
+            items:3
+          }
+      }
+   })
+   $('.slider-sertu').owlCarousel({
+      loop: true,
+      margin:30,
+      dots:false,
+      nav:true,
+      mouseDrag:false,
+      autoplay:true,
+      responsive: {
+          0: {
+              items:1
+          },
+
+          600: {
+              items:1
+          },
+          1000: {
+              items:3
+          }
+      }
+  })
+
+  $('.shop-slider').owlCarousel({
+    loop: true,
+    margin:30,
+    autoplay:true,
+    nav:false,
+    dots:true,
+    responsive: {
+        0: {
+            items:1
+        },
+        600: {
+            items:1
+        },
+        667: {
+          items:2
+        },
+        1000: {
+            items:4
+        }
+    }
+ })
+
+ $('.team-membern').owlCarousel({
+  loop: true,
+  margin:30,
+  autoplay:true,
+  nav:false,
+  dots:true,
+  responsive: {
+      0: {
+          items:1
+      },
+      600: {
+          items:1
+      },
+      667: {
+        items:2
+      },
+      1000: {
+          items:4
+      }
+  }
+})
+
+$('.result-sliden').owlCarousel({
+      loop: true,
+      margin:20,
+      dots:true,
+      nav:false,
+      mouseDrag:false,
+      autoplay:true,
+      responsive: {
+          0: {
+              items:1
+          },
+          600: {
+              items:1
+          },
+          768: {
+              items:2
+          },
+          820: {
+              items:2
+          },
+          1000: {
+              items:3
+          }
+      }
+  })
+
+
+$('.sponj-slide').owlCarousel({
+  loop: true,
+  margin:30,
+  autoplay:true,
+  nav:false,
+  dots:true,
+  responsive: {
+      0: {
+          items:1
+      },
+      375: {
+        items:2
+      },
+      600: {
+          items:2
+      },
+      667: {
+        items:2
+      },
+      1000: {
+          items:6
+      }
+  }
+})
+$('.coverages-slider').owlCarousel({
+    loop: true,
+    margin:20,
+    autoplay:true,
+    nav:false,
+    dots:true,
+    responsive: {
+        0: {
+            items:1
+        },
+        600: {
+            items:1
+        },
+        667: {
+          items:2
+        },
+        1000: {
+            items:2
+        },
+        1024: {
+          items:4
+        }
+    }
+   })
+
+});
+
+</script>
+
+<script>
+  $(document).ready(function() {
+var myCarousel = document.querySelector('#carouselExampleFade')
+var carousel = new bootstrap.Carousel(carouselExampleFade, {
+  interval: 3000,
+})
+});
+</script>
+
+
+
+<script>
+  $(document).ready(function() {
+  //YOUTUBE VIDEO
+  $('.play-button').click(function(e){
+      var iframeEl = $('<iframe>', { src: $(this).data('url') });
+      $('#youtubevideo').attr('src', $(this).data('url'));
+  })
+
+  $('#close-video').click(function(e){
+      $('#youtubevideo').attr('src', '');
+  });
+
+  });
+
+  </script>
+
+<script>
+   init();
+
+function init(){
+    var videoplaylist = document.getElementById('videoplaylist');
+    var playlist = document.getElementById('playlist');
+    var tracks = playlist.getElementsByTagName('a');
+    videoplaylist.volume = 0.10;
+    videoplaylist.play();
+
+    for(var track in tracks) {
+      var link = tracks[track];
+      if(typeof link === "function" || typeof link === "number") continue;
+
+			link.addEventListener('click', function(e) {
+      	e.preventDefault();
+        var song = this.getAttribute('href');
+       	run(song, videoplaylist, this);
+      });
+    }
+
+    videoplaylist.addEventListener('ended',function(e) {
+        for(var track in tracks) {
+					var link = tracks[track];
+          var nextTrack = parseInt(track) + 1;
+        	if(typeof link === "function" || typeof link === "number") continue;
+          if(!this.src) this.src = tracks[0];
+          if(track == (tracks.length - 1)) nextTrack = 0;
+                                	console.log(nextTrack);
+        	if(link.getAttribute('href') === this.src) {
+          	var nextLink = tracks[nextTrack];
+          	run(nextLink.getAttribute('href'), videoplaylist, nextLink);
+            break;
+          }
+        }
+    });
+}
+function run(song, videoplaylist, link){
+				var parent = link.parentElement;
+
+				//quitar el active de todos los elementos de la lista
+				var items = parent.parentElement.getElementsByTagName('li');
+        for(var item in items) {
+					if(items[item].classList)
+        		items[item].classList.remove("active");
+        }
+
+        //agregar active a este elemento
+        parent.classList.add("active");
+
+        //tocar la cancion
+        videoplaylist.src = song;
+        videoplaylist.load();
+        videoplaylist.play();
+}
+</script>
+
+<script>
+// Reload the page after 30 seconds
+setTimeout(function() {
+    window.location.reload(true);
+}, 30000); // 30 seconds = 30000 milliseconds
+</script>
+{% endblock js %}

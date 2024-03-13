@@ -1,0 +1,695 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Teams{% endblock title %}
+{% block image_bar1 %}Teams{% endblock image_bar1 %}
+{% block image_bar2 %}Teams{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+
+
+     <div class="tesmas d-inline-block w-100">
+         <div class="container">
+
+          <ul class="nav nav-pills mb-3 justify-content-center" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#menst" type="button" role="tab" >Men's Teams</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#wmenst" type="button" role="tab">Women's Teams</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="menst" role="tabpanel">
+              <h2 class="main-hed01 mt-5"> INTERNATIONAL TEAMS </h2>
+              <div class="grid-tesms w-100 mt-4">
+
+                  <a href="{% url 'teams_details' pk=1 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206606.png' %}"/>
+
+                       </div>
+                       <h5> India
+                         <span class="mt-1 d-block"> Ratings 1
+                         </span>
+                       </h5>
+                      </div>
+
+                  </a>
+
+
+                  <a href="{% url 'teams_details' pk=5 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/206618.png' %}"/>
+
+                     </div>
+                     <h5> Australia
+                       <span class="mt-1 d-block"> Ratings 2
+                       </span>
+                     </h5>
+                    </div>
+
+                  </a>
+
+                  <a href="{% url 'teams_details' pk=7 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/555604.png' %}"/>
+
+                     </div>
+                     <h5> South Africa
+                       <span class="mt-1 d-block"> Ratings 3
+                       </span>
+                     </h5>
+                    </div>
+
+                  </a>
+
+                  <a href="{% url 'teams_details' pk=3 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/555648.png' %}"/>
+
+                       </div>
+                       <h5> Pakistan
+                         <span class="mt-1 d-block"> Ratings 4
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=8 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/5372867.png' %}"/>
+
+                       </div>
+                       <h5> New Zealand
+                         <span class="mt-1 d-block"> Ratings 5
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=6 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/555527.png' %}"/>
+
+                     </div>
+                     <h5> England
+                       <span class="mt-1 d-block"> Ratings 6
+                       </span>
+                     </h5>
+                    </div>
+
+                  </a>
+
+                  <a href="{% url 'teams_details' pk=4 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/555441.png' %}"/>
+
+                     </div>
+                     <h5> Sri Lanka
+                       <span class="mt-1 d-block"> Ratings 7
+                       </span>
+                     </h5>
+                    </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=2 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/3371885.png' %}"/>
+
+                       </div>
+                       <h5> Bangladesh
+                         <span class="mt-1 d-block"> Ratings 8
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=9 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/afganistanflag.png' %}"/>
+
+                       </div>
+                       <h5> Afghanistan
+                         <span class="mt-1 d-block"> Ratings 9
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=10 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/westindiesflag.jpg' %}"/>
+
+                       </div>
+                       <h5> West Indies
+                         <span class="mt-1 d-block"> Ratings 10
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=11 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206797.png' %}"/>
+
+                       </div>
+                       <h5> Scotland
+                         <span class="mt-1 d-block"> Ratings 11
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=12 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/3373276.png' %}"/>
+
+                       </div>
+                       <h5> Ireland
+                         <span class="mt-1 d-block"> Ratings 12
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=13 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206615.png' %}"/>
+
+                       </div>
+                       <h5> Netherlands
+                         <span class="mt-1 d-block"> Ratings 13
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=14 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/555430.png' %}"/>
+
+                       </div>
+                       <h5> Nepal
+                         <span class="mt-1 d-block"> Ratings 14
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+                   <a href="{% url 'teams_details' pk=15 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206790.png' %}"/>
+
+                       </div>
+                       <h5> Namibia
+                         <span class="mt-1 d-block"> Ratings 15
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                  <a href="{% url 'teams_details' pk=16 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206626.png' %}"/>
+
+                       </div>
+                       <h5> United States of America
+                         <span class="mt-1 d-block"> Ratings 16
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=17 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206848.png' %}"/>
+
+                       </div>
+                       <h5> Oman
+                         <span class="mt-1 d-block"> Ratings 17
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=18 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206742.png' %}"/>
+
+                       </div>
+                       <h5> Papua New Guinea
+                         <span class="mt-1 d-block"> Ratings 18
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+
+
+
+                   <a href="{% url 'teams_details' pk=19 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/canadaflag.WEBP' %}"/>
+
+                       </div>
+                       <h5> Canada
+                         <span class="mt-1 d-block"> Ratings 19
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=20 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/ugandaflag.png' %}"/>
+
+                       </div>
+                       <h5> Uganda
+                         <span class="mt-1 d-block"> Ratings 20
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+              </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="wmenst" role="tabpanel">
+              <h2 class="main-hed01 mt-5"> INTERNATIONAL TEAMS </h2>
+              <div class="grid-tesms w-100 mt-4">
+
+
+                <a href="{% url 'teams_details' pk=1 %}" class="btn btn-tems01">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div class="flagds">
+                      <img alt="teams" src="{% static 'cricketlive/images/206606.png' %}"/>
+
+                    </div>
+                    <h5> India
+                      <span class="mt-1 d-block"> Ratings 1
+                      </span>
+                    </h5>
+                   </div>
+
+                 </a>
+                  <a href="{% url 'teams_details' pk=5 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206618.png' %}"/>
+
+                       </div>
+                       <h5> Australia
+                         <span class="mt-1 d-block"> Ratings 2
+                         </span>
+                       </h5>
+                      </div>
+
+                  </a>
+
+
+
+                  <a href="{% url 'teams_details' pk=7 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/555527.png' %}"/>
+
+                     </div>
+                     <h5> South Africa
+                       <span class="mt-1 d-block"> Ratings 3
+                       </span>
+                     </h5>
+                    </div>
+
+                  </a>
+
+                  <a href="{% url 'teams_details' pk=3 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/555648.png' %}"/>
+
+                     </div>
+                     <h5> Pakistan
+                       <span class="mt-1 d-block"> Ratings 4
+                       </span>
+                     </h5>
+                    </div>
+
+                  </a>
+                  <a href="{% url 'teams_details' pk=8 %}" class="btn btn-tems01">
+                   <div class="d-flex align-items-center justify-content-center">
+                     <div class="flagds">
+                       <img alt="teams" src="{% static 'cricketlive/images/5372867.png' %}"/>
+
+                     </div>
+                     <h5> New Zealand
+                       <span class="mt-1 d-block"> Ratings 5
+                       </span>
+                     </h5>
+                    </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=6 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/555527.png' %}"/>
+
+                       </div>
+                       <h5> England
+                         <span class="mt-1 d-block"> Ratings 6
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=4 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/555441.png' %}"/>
+
+                       </div>
+                       <h5> Sri Lanka
+                         <span class="mt-1 d-block"> Ratings 7
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=2 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/3371885.png' %}"/>
+
+                       </div>
+                       <h5> Bangladesh
+                         <span class="mt-1 d-block"> Ratings 8
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=9 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/afganistanflag.png' %}"/>
+
+                       </div>
+                       <h5> Afghanistan
+                         <span class="mt-1 d-block"> Ratings 9
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=10 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/westindiesflag.jpg' %}"/>
+
+                       </div>
+                       <h5> West Indies
+                         <span class="mt-1 d-block"> Ratings 10
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=11 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206797.png' %}"/>
+
+                       </div>
+                       <h5> Scotland
+                         <span class="mt-1 d-block"> Ratings 11
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=12 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/3373276.png' %}"/>
+
+                       </div>
+                       <h5> Ireland
+                         <span class="mt-1 d-block"> Ratings 12
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=13 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206615.png' %}"/>
+
+                       </div>
+                       <h5> Netherlands
+                         <span class="mt-1 d-block"> Ratings 13
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=14 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/555430.png' %}"/>
+
+                       </div>
+                       <h5> Nepal
+                         <span class="mt-1 d-block"> Ratings 14
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=15 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206790.png' %}"/>
+
+                       </div>
+                       <h5> Namibia
+                         <span class="mt-1 d-block"> Ratings 15
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=16 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206626.png' %}"/>
+
+                       </div>
+                       <h5> United States of America
+                         <span class="mt-1 d-block"> Ratings 16
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+
+                   <a href="{% url 'teams_details' pk=17 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206848.png' %}"/>
+
+                       </div>
+                       <h5> Oman
+                         <span class="mt-1 d-block"> Ratings 17
+                         </span>
+                       </h5>
+                      </div>
+
+                   </a>
+
+                   <a href="{% url 'teams_details' pk=18 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/206742.png' %}"/>
+
+                       </div>
+                       <h5>  Papua New Guinea
+                         <span class="mt-1 d-block"> Ratings 18
+                         </span>
+                       </h5>
+                      </div>
+                   </a>
+                  <a href="{% url 'teams_details' pk=19 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/canadaflag.WEBP' %}"/>
+
+                       </div>
+                       <h5>  Canada
+                         <span class="mt-1 d-block"> Ratings 19
+                         </span>
+                       </h5>
+                      </div>
+                   </a>
+                  <a href="{% url 'teams_details' pk=20 %}" class="btn btn-tems01">
+                     <div class="d-flex align-items-center justify-content-center">
+                       <div class="flagds">
+                         <img alt="teams" src="{% static 'cricketlive/images/ugandaflag.png' %}"/>
+
+                       </div>
+                       <h5>  Uganda
+                         <span class="mt-1 d-block"> Ratings 20
+                         </span>
+                       </h5>
+                      </div>
+                   </a>
+              </div>
+            </div>
+          </div>
+
+         </div>
+     </div>
+
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+
+  $(document).ready(function() {
+var table = $('#matchess').removeAttr('width').DataTable( {
+
+columnDefs: [
+    { width: 200, targets: 0 }
+],
+fixedColumns: true,
+"paging": false
+} );
+} );
+
+
+$(document).ready(function() {
+var table = $('#matchess2').removeAttr('width').DataTable( {
+
+  columnDefs: [
+      { width: 200, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+$(document).ready(function() {
+var table = $('#matchess3').removeAttr('width').DataTable( {
+  columnDefs: [
+      { width: 100, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+</script>
+
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+{% endblock js %}

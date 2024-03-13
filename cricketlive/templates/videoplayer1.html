@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Video{% endblock title %}
+{% block css_internal %}
+  <style>
+
+    .fa-solid .fa-play {
+  font-size: 800px; /* You can adjust the size as needed */
+}
+
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* You can customize the size and style of the play button */
+      width: 300px;
+      height: 300px;
+      /* background-color: #3498db; */
+      border: none;
+      /* border-radius: 50%; */
+      color: black;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .change-my-color:hover {
+        fill: red;
+      }
+    .change-my-color {
+        fill: black;
+      }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    @media only screen and (max-width: 992px) {
+      .btn-play svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .btn-play svg{
+          width: 50px;
+          height: 50px;
+        }
+        }
+  </style>
+{% endblock css_internal %}
+{% block image_bar1 %}Video{% endblock image_bar1 %}
+{% block image_bar2 %}Video{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 mtches-divbnh01 body-part pt-0">
+
+  <div class="next-matches d-inline-block w-100">
+    <div class="container">
+          <!-- <h1 class="main-hed01"> Next Match </h1> -->
+        <div class="image-container">
+                <h1> {{title}}</h1>
+            <video width="1200" height="700" controls autoplay muted>
+                <source src="{{ url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                <br>
+        </div>
+        <br><br><br>
+    </div>
+</div>
+</section>
+{% endblock content %}

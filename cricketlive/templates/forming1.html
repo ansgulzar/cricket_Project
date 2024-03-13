@@ -1,0 +1,280 @@
+{% extends 'base.html' %} {% load static %} {% block css %}<link
+  rel="stylesheet"
+  href="{% static 'cricketlive/css/form.css' %}" />{% endblock css %} {% block title %}Data Entry{% endblock title %} {% block image_bar1 %}Data Entry{% endblock image_bar1 %} {% block image_bar2 %}Data Entry{% endblock image_bar2 %}
+{% block logout %}
+<button class="btn login-btn-links" style="background: #ffc107">
+  <a href="{% url 'logoutview' %}" }>Logout</a>
+</button>
+{% endblock logout %} {% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+  <div class="matcheds d-inline-block w-100 mt-5">
+    <div class="container">
+      <ul
+        class="nav nav-pills mb-3 justify-content-center"
+        id="pills-tab"
+        role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-news-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-news"
+            type="button"
+            role="tab">
+            News
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-videos-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-videos"
+            type="button"
+            role="tab">
+            Videos
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-live-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-live"
+            type="button"
+            role="tab">
+            Live Match
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            data-bs-toggle="pill"
+            type="button"
+            role="tab">
+            <a href="{% url 'update_delete' %}">Update live match</a>
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-news" role="tabpanel">
+          <div class="cominu-feterx d-inline-block w-100">
+            <h3 class="mt-5 mb-4">News</h3>
+            <div class="containerr">
+              <form method="post" action="{% url 'data_entry' %}">
+                {% csrf_token %}
+                <label for="{{ news_form.title.id_for_label }}"
+                  >News Title:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.title }}<br /><br />
+
+                <label for="{{ news_form.subtitle.id_for_label }}"
+                  >Subtitle:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.subtitle }}<br /><br />
+
+                <label for="{{ news_form.para1.id_for_label }}"
+                  >Paragraph 1:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para1 }}<br /><br />
+
+                <label for="{{ news_form.para2.id_for_label }}"
+                  >Paragraph 2:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para2 }}<br /><br />
+
+                <label for="{{ news_form.para3.id_for_label }}"
+                  >Paragraph 3:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para3 }}<br /><br />
+
+                <label for="{{ news_form.para4.id_for_label }}"
+                  >Paragraph 4:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para4 }}<br /><br />
+
+                <label for="{{ news_form.para5.id_for_label }}"
+                  >Paragraph 5:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para5 }}<br /><br />
+
+                <label for="{{ news_form.para6.id_for_label }}"
+                  >Paragraph 6:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.para6 }}<br /><br />
+
+                <label for="{{ news_form.poster.id_for_label }}">Poster:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.poster }}<br /><br />
+
+                <label for="{{ news_form.image1.id_for_label }}">Image 1:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.image1 }}<br /><br />
+
+                <label for="{{ news_form.image2.id_for_label }}">Image 2:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.image2 }}<br /><br />
+
+                <label for="{{ news_form.image3.id_for_label }}">Image 3:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.image3 }}<br /><br />
+
+                <label for="{{ news_form.date.id_for_label }}">News Date:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ news_form.date }}<br /><br />
+                {% if news_form.errors %}
+                <p style="color: red">Please fill in all required fields.</p>
+                {% endif %}
+
+                <button class="news_button" type="submit" name="news_submit">
+                  Submit News
+                </button>
+              </form>
+            </div>
+            <br /><br />
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-videos" role="tabpanel">
+          <div class="cominu-feterx d-inline-block w-100">
+            <h3>Videos</h3>
+            <div class="containerr">
+              <form method="post" action="{% url 'data_entry' %}">
+                {% csrf_token %}
+                <label for="{{ video_form.title.id_for_label }}"
+                  >Video Title:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ video_form.title }}<br /><br />
+
+                <label for="{{ video_form.thumbnail.id_for_label }}"
+                  >Video Thumbnail:</label
+                >
+                {{ video_form.thumbnail }}<br /><br />
+
+                <label for="{{ video_form.video_url.id_for_label }}"
+                  >Video Url:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ video_form.video_url }}<br /><br />
+
+                <label for="{{ video_form.video_date.id_for_label }}"
+                  >Video Date:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ video_form.video_date }}<br /><br />
+
+                <label
+                  for="{{ video_form.video_type.id_for_label }}"
+                  style="font-size: 16px"
+                  >Video Category:</label
+                >
+                {{ video_form.video_type }}<br /><br />
+                {% if video_form.errors %}
+                <p style="color: red">Please fill in all required fields.</p>
+                {% endif %}
+                <button class="video_button" type="submit" name="video_submit">
+                  Submit Video
+                </button>
+              </form>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-5 mt-0 gy-4 g-lg-5">
+              <br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-live" role="tabpanel">
+          <div class="cominu-feterx d-inline-block w-100">
+            <h3>Live Match</h3>
+            <div class="containerr">
+              <form method="post" action="{% url 'data_entry' %}">
+                {% csrf_token %}
+                <label for="{{ live_form.title.id_for_label }}"
+                  >Video Title:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ live_form.title }}<br /><br />
+
+                <label for="{{ live_form.thumbnail.id_for_label }}"
+                  >Video Thumbnail:</label
+                >
+                {{ video_form.thumbnail }}<br /><br />
+
+                <label for="{{ live_form.video_url.id_for_label }}"
+                  >Video Url:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ live_form.video_url }}<br /><br />
+
+                <label for="{{ live_form.video_date.id_for_label }}"
+                  >Video Date:</label
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ live_form.video_date }}<br /><br />
+
+                {% if live_form.errors %}
+                <p style="color: red">Please fill in all required fields.</p>
+                {% endif %}
+                <button class="video_button" type="submit" name="live_submit">
+                  Submit Live
+                </button>
+              </form>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-5 mt-0 gy-4 g-lg-5">
+              <br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %} {% block js %}
+<script>
+  $(document).ready(function () {
+    $(".custom-select").each(function () {
+      var classes = $(this).attr("class"),
+        id = $(this).attr("id"),
+        name = $(this).attr("name");
+      var template = '<div class="' + classes + '">';
+      template +=
+        '<span class="custom-select-trigger">' +
+        $(this).attr("placeholder") +
+        "</span>";
+      template += '<div class="custom-options">';
+      $(this)
+        .find("option")
+        .each(function () {
+          template +=
+            '<span class="custom-option ' +
+            $(this).attr("class") +
+            '" data-value="' +
+            $(this).attr("value") +
+            '">' +
+            $(this).html() +
+            "</span>";
+        });
+      template += "</div></div>";
+
+      $(this).wrap('<div class="custom-select-wrapper"></div>');
+      $(this).hide();
+      $(this).after(template);
+    });
+    $(".custom-option:first-of-type").hover(
+      function () {
+        $(this).parents(".custom-options").addClass("option-hover");
+      },
+      function () {
+        $(this).parents(".custom-options").removeClass("option-hover");
+      }
+    );
+    $(".custom-select-trigger").on("click", function () {
+      $("html").one("click", function () {
+        $(".custom-select").removeClass("opened");
+      });
+      $(this).parents(".custom-select").toggleClass("opened");
+      event.stopPropagation();
+    });
+    $(".custom-option").on("click", function () {
+      $(this)
+        .parents(".custom-select-wrapper")
+        .find("select")
+        .val($(this).data("value"));
+      $(this)
+        .parents(".custom-options")
+        .find(".custom-option")
+        .removeClass("selection");
+      $(this).addClass("selection");
+      $(this).parents(".custom-select").removeClass("opened");
+      $(this)
+        .parents(".custom-select")
+        .find(".custom-select-trigger")
+        .text($(this).text());
+    });
+  });
+</script>
+{% endblock js %}

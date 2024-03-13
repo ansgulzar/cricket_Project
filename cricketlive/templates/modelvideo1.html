@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Video{% endblock title %}
+{% block css_internal %}
+<style>
+
+    .fa-solid .fa-play {
+  font-size: 800px; /* You can adjust the size as needed */
+}
+
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* You can customize the size and style of the play button */
+      width: 300px;
+      height: 300px;
+      /* background-color: #3498db; */
+      border: none;
+      /* border-radius: 50%; */
+      color: black;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .change-my-color:hover {
+        fill: red;
+      }
+    .change-my-color {
+        fill: rgb(224, 17, 17);
+      }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    @media only screen and (max-width: 992px) {
+      .btn-play svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .btn-play svg{
+          width: 50px;
+          height: 50px;
+        }
+        }
+  </style>
+{% endblock css_internal %}
+{% block image_bar1 %}Video{% endblock image_bar1 %}
+{% block image_bar2 %}Video{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+
+    <div class="video-section d-inline-block w-100">
+        <div class="container">
+             <div class="d-flex align-items-center justify-content-between">
+                   <h2 class="main-hed01"> Latest Videos </h2>
+                 <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+             </div>
+
+             <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                 {% for item in latest %}
+                 <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  data-bs-target="#myModal"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                       <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}">
+                       <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg></div>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}} </h5>
+
+                   </div>
+                 </a>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+
+
+    <div class="video-section pressc d-inline-block w-100">
+        <div class="container">
+             <div class="d-flex align-items-center justify-content-between">
+                   <h2 class="main-hed01"> Magical Moments </h2>
+                 <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+             </div>
+             <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                 {% for item in magical %}
+                 <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  data-bs-target="#myModal"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                       <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}"/>
+                       <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg></div>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}} </h5>
+                   </div>
+                 </a>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+
+
+    <div class="video-section d-inline-block w-100">
+        <div class="container">
+             <div class="d-flex align-items-center justify-content-between">
+                   <h2 class="main-hed01"> Great Innings </h2>
+                 <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+             </div>
+              <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                  {% for item in great_innings %}
+                 <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  data-bs-target="#myModal"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                       <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}"/>
+                       <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg></div>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}} </h5>
+                   </div>
+                 </a>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+
+
+    <div class="video-section hpressc d-inline-block w-100">
+        <div class="container">
+             <div class="d-flex align-items-center justify-content-between">
+                   <h2 class="main-hed01 text-white"> Highlights </h2>
+                 <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="color: white; font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+             </div>
+             <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                 {% for item in highlights %}
+                 <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  data-bs-target="#myModal"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                       <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}"/>
+                       <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg></div>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}} </h5>
+                   </div>
+                 </a>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+
+    <div class="video-section d-inline-block w-100">
+        <div class="container">
+             <div class="d-flex align-items-center justify-content-between">
+                   <h2 class="main-hed01"> Enjoyable Moments </h2>
+                 <a href="{% url 'manyvideos' %}" class="btn btn-asee d-none d-md-inline-block" style="font-style: oblique"> See All <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+             </div>
+             <div class="coverages-slider  owl-carousel owl-theme mt-4">
+                 {% for item in enjoyable %}
+                 <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}"  data-bs-target="#myModal"  class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                   <div class="vio-imghj">
+                       <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}"/>
+                       <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg></div>
+                   </div>
+                   <div class="trecty">
+                      <h5> {{item.title}} </h5>
+                   </div>
+                 </a>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+ $(document).ready(function(){
+    $('.coverages-slider').owlCarousel({
+        loop: true,
+        margin:20,
+        autoplay:true,
+        nav:false,
+        dots:true,
+        responsive: {
+            0: {
+                items:1
+            },
+            600: {
+                items:1
+            },
+            667: {
+            items:2
+            },
+            1000: {
+                items:2
+            },
+            1024: {
+            items:3
+            },
+            1180: {
+            items:3
+            },
+            1200: {
+            items:4
+            }
+        }
+    })
+
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+<script>
+    $(document).ready(function() {
+    //YOUTUBE VIDEO
+    $('.play-button').click(function(e){
+        var iframeEl = $('<iframe>', { src: $(this).data('url') });
+        $('#youtubevideo').attr('src', $(this).data('url'));
+    })
+
+    $('#close-video').click(function(e){
+        $('#youtubevideo').attr('src', '');
+    });
+
+
+    });
+
+    </script>
+{% endblock js %}

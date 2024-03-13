@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Matches{% endblock title %}
+{% block image_bar1 %}Matches{% endblock image_bar1 %}
+{% block image_bar2 %}Matches{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+
+
+      <div class="matcheds d-inline-block w-100 mt-5">
+          <div class="container">
+             <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab">Live & Upcoming</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" >Completed</button>
+              </li>
+
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
+                  <div class="cominu-feterx d-inline-block w-100">
+
+                      <h3 class="mt-5 mb-4"> Live </h3>
+                      {% if data1 %}
+                        {% for match in data1 %}
+                          <a href="{% url 'details' pk=match.event_key %}" class="comon-teams-01 d-inline-block w-100">
+                              <div class="top-part-section d-inline-block w-100">
+                                 <div class="row align-items-center">
+                                    <div class="col-lg-3">
+                                      <p class="text-white text-center text-lg-start">{{match.league}}</p>
+                                        <h4 class="text-white text-center text-lg-start"> {{match.event_time}} (YOUR TIME) </h4>
+                                        <p class="text-white text-center text-lg-start mt-4"> {{match.event_stadium}} </p>
+                                        <p class="text-white text-center text-lg-start mt-1">  <span class="d-block"> {{match.event_date_start}} , {{match.event_time}} </span> </p>
+                                      </p>
+                                    </div>
+                                    <div class="col-lg-6 d-grid justify-content-center my-4 my-lg-0">
+                                      <div class="flexrt">
+                                        <div class="comoi-temas d-lg-flex align-items-center">
+                                           <div class="logui ">
+                                             <img alt="su" src="{{match.event_home_team_logo}}"/>
+                                           </div>
+                                           <h5 class="text-white"> {{match.event_home_team}}
+                                            <span> {{match.event_home_final_result}}
+                                                 {% for team, innings_list in match.extra.items %}
+                                                    {% if forloop.first %}
+                                                        {% for innings in innings_list %}
+                                                            {% with innings.total_overs as total_overs %}
+                                                                <small> over: {{ total_overs }}</small>
+                                                            {% endwith %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </span>
+                                          </h5>
+                                        </div>
+                                        <div class="comoi-temas mt-4 d-lg-flex align-items-center">
+                                          <div class="logui">
+                                            <img alt="su" src="{{match.event_away_team_logo}}"/>
+                                          </div>
+                                          <h5 class="text-white"> {{match.event_away_team}}
+                                            <span> {{match.event_away_final_result}}
+                                                {% for team, innings_list in match.extra.items %}
+                                                    {% if forloop.counter == 2 %}
+                                                        {% for innings in innings_list %}
+                                                            {% with innings.total_overs as total_overs %}
+                                                                <small> over: {{ total_overs }}</small>
+                                                            {% endwith %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </span>
+                                          </h5>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 d-grid justify-content-lg-end">
+                                      <div class="imgou">
+                                          <img alt="sy" src="{% static 'cricketlive/images/bg-stadium01.jpg' %}"/>
+                                      </div>
+                                      <div class="btn btn-live d-table text-center"> Details </div>
+                                    </div>
+                                 </div>
+                              </div>
+                          </a>
+                          <br><br>
+                          {% endfor %}
+                      {% else %}
+                        <a href="match-details.html" class="comon-teams-01 d-inline-block w-100">
+                          <div class="top-part-section d-inline-block w-100">
+                              <h1 style="color: white">No live Matches now</h1>
+                          </div>
+                        </a>
+                      <br>
+                      {% endif %}
+                      <br><br>
+
+                      <h3 class="mt-5 mb-4"> Upcoming </h3>
+                      {% for match in data2 %}
+                          <a href="{% url 'details' pk=match.event_key %}" class="comon-teams-01 upcoming d-inline-block w-100">
+                              <div class="top-part-section d-inline-block w-100">
+                                 <div class="row align-items-center">
+                                    <div class="col-lg-3">
+                                      <p class="text-center text-lg-start"> {{match.league_name}} </p>
+
+                                        <h4 class="text-center text-lg-start"> {{match.event_time}}</h4>
+                                        <p class="text-center text-lg-start mt-4"> {{match.event_stadium}} </p>
+                                        <p class="text-center text-lg-start mt-1">  <span class="d-block">{{match.event_date_start}} , {{match.event_time}} </span> </p>
+                                      </p>
+                                    </div>
+                                    <div class="col-lg-6 d-grid justify-content-center my-4 my-lg-0">
+                                      <div class="flexrt">
+                                        <div class="comoi-temas d-lg-flex align-items-center">
+
+                                           <div class="logui ">
+                                             <img alt="su" src="{{match.event_home_team_logo}}"/>
+                                           </div>
+                                           <h5> {{match.event_home_team}}
+                                            <span>
+                                              <small> {{match.event_type}} </small>
+                                            </span>
+                                          </h5>
+
+                                        </div>
+
+                                        <div class="comoi-temas mt-4 d-lg-flex align-items-center">
+
+                                          <div class="logui">
+                                            <img alt="su" src="{{match.event_away_team_logo}}"/>
+                                          </div>
+
+                                          <h5> {{match.event_away_team}}
+                                            <span>
+                                              <small>  </small>
+                                            </span>
+                                          </h5>
+
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 d-grid justify-content-lg-end">
+                                      <div class="imgou">
+                                          <img alt="sy" src="{% static 'cricketlive/images/bg-stadium01.jpg' %}"/>
+                                      </div>
+                                      <div class="btn btn-live d-table text-center">  Details </div>
+                                    </div>
+                                 </div>
+                              </div>
+                          </a> <br><br>
+                      {% endfor %}
+
+
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+                 <div class="cominu-feterx d-inline-block w-100">
+                     {% for match in data3 %}
+                        <a href="{% url 'details' pk=match.event_key %}" class="comon-teams-01 upcoming d-inline-block w-100 mt-5">
+                          <div class="top-part-section d-inline-block w-100">
+                            <h5 class="win-text text-center"> {{match.event_status_info}}</h5>
+                            <div class="row align-items-center">
+                                <div class="col-lg-3">
+                                  <p class="text-center text-lg-start"> {{match.league_name}} </p>
+
+                                    <h4 class="text-center text-lg-start">{{match.event_time}} (YOUR TIME) </h4>
+                                    <p class="text-center text-lg-start mt-4"> {{match.event_stadium}} </p>
+                                    <p class="text-center text-lg-start mt-1">  <span class="d-block"> {{match.event_date_start}}, {{match.event_time}} </span> </p>
+                                  </p>
+                                </div>
+                                <div class="col-lg-6 d-grid justify-content-center my-4 my-lg-0">
+                                  <div class="flexrt">
+                                    <div class="comoi-temas d-lg-flex align-items-center">
+
+                                      <div class="logui ">
+                                        <img alt="su" src="{{match.event_home_team_logo}}"/>
+                                      </div>
+                                      <h5> {{match.event_home_team}}
+                                        <span> {{match.event_home_final_result}}
+                                        </span>
+                                      </h5>
+
+                                    </div>
+                                    <div class="comoi-temas mt-4 d-lg-flex align-items-center">
+
+                                      <div class="logui">
+                                        <img alt="su" src="{{match.event_away_team_logo}}"/>
+                                      </div>
+
+                                      <h5> {{match.event_away_team}}
+                                        <span> {{match.event_away_final_result}}
+
+                                        </span>
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3 d-grid justify-content-lg-end">
+                                  <div class="imgou">
+                                      <img alt="sy" src="{% static 'cricketlive/images/bg-stadium01.jpg' %}"/>
+                                  </div>
+                                  <div class="btn btn-live d-table text-center">  Details </div>
+                                </div>
+                            </div>
+                          </div>
+                        </a>
+                     <br>
+                     {% endfor %}
+                     <br>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+{% endblock js %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Live{% endblock title %}
+{% block css_internal %}
+  <style>
+
+    .fa-solid .fa-play {
+  font-size: 800px; /* You can adjust the size as needed */
+}
+
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* You can customize the size and style of the play button */
+      width: 300px;
+      height: 300px;
+      /* background-color: #3498db; */
+      border: none;
+      /* border-radius: 50%; */
+      color: black;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .change-my-color:hover {
+        fill: #FEBE10;
+      }
+    .change-my-color {
+        fill: red;
+      }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    @media only screen and (max-width: 992px) {
+      .btn-play svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .btn-play svg{
+          width: 50px;
+          height: 50px;
+        }
+        }
+  </style>
+{% endblock css_internal %}
+{% block image_bar1 %}Live{% endblock image_bar1 %}
+{% block image_bar2 %}Live{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 mtches-divbnh01 body-part pt-0">
+
+  <div class="next-matches d-inline-block w-100">
+    <div class="container">
+          <!-- <h1 class="main-hed01"> Next Match </h1> -->
+        {% for item in live %}
+        <a href="{% url 'liveplayer' pk=item.video_url title=item.title %}">
+            <div class="image-container">
+                <h1>{{item.title}}</h1>
+                <br>
+                <img src="{{item.thumbnail}}" alt="Your Image" class="image">
+                <div class="btn-play"><svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="200" width="200"  viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+            </div>
+            <br><br><br>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+</section>
+{% endblock content %}

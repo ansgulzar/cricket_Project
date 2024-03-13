@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% block title %}News Details{% endblock title %}
+{% block image_bar1 %}News Details{% endblock image_bar1 %}
+{% block image_bar2 %}News Details{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part pt-0">
+
+    <div class="blog-details-page comon-services-pge py-5">
+
+        <div class="container">
+           <div class="row gx-lg-5">
+              <div class="col-lg-7 col-xl-8">
+                  <div class="blog-post">
+                      <figure class="bigh-shou">
+                          <img src="{{items.poster}}" alt="post"/>
+                      </figure>
+                      <div class="d-md-flex justify-content-between share-div">
+                          <ul class="list-unstyled d-flex">
+                             <li> <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffa52c" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>  By Author </li>
+                             <li> <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffac1c" d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z"/></svg>  {{items.date}} </li>
+                          </ul>
+                      </div>
+                      <h2 class="comon-heading mt-4"> {{items.title}} </h2>
+                                <h6 style="text-align: justify">{{items.para1}}</h6> <br>
+                                {% if items.image1 %}
+                                    <img src="{{items.image1}}" alt="image1"/>
+                                {% endif %}
+                                <h6 style="text-align: justify">{{items.para2}}</h6> <br>
+                                {% if items.image2 %}
+                                    <img src="{{items.image2}}" alt="image1"/>
+                                {% endif %}
+                                <h6 style="text-align: justify">{{items.para3}}</h6> <br>
+                                {% if items.image3 %}
+                                    <img src="{{items.image3}}" alt="image1"/>
+                                {% endif %}
+                                <h6 style="text-align: justify">{{items.para4}}</h6> <br>
+                                <h6 style="text-align: justify">{{items.para5}}</h6> <br>
+                                <h6 style="text-align: justify">{{items.para6}}</h6> <br>
+                                <br><br>
+                  </div>
+              </div>
+              <div class="col-lg-5 col-xl-4">
+
+                  <div class="recent-post-div mt-5">
+                      <h2 class="mb-4 comon-heading"> Recent Post </h2>
+                      <div class="recent-post-div-insiide">
+                          {% for item in posts_recent|slice:":3" %}
+                          <a href="{% url 'news_details' pk=item.id %}" class="d-flex w-100 justify-content-between align-items-center">
+                              <figure>
+                                  <img src="{{item.poster}}" alt="post"/>
+                              </figure>
+                              <h5>  {{item.title}}  </h5>
+                          </a>
+                           {% endfor %}
+                      </div>
+                  </div>
+
+              </div>
+           </div>
+        </div>
+
+     </div>
+
+
+</section>
+{% endblock content %}

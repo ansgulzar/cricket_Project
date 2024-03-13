@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block image_bar1 %}About{% endblock image_bar1 %}
+{% block image_bar2 %}About{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part pt-0">
+
+      <div class="about-page-main comon-sub-page-main d-inline-block w-100">
+
+           <div class="about-club-top">
+               <div class="container">
+                   <div class="row row-cols-1 row-cols-lg-2 g-lg-5">
+                        <div class="col position-relative">
+                            <figure class="big-img">
+                            <img src="{% static 'cricketlive/images/GettyImages-1764843770.webp' %}" alt="pic">
+                            </figure>
+                            <figure class="small-img">
+                                <img src="{% static 'cricketlive/images/ghj.jpeg' %}" alt="pic2">
+                            </figure>
+                        </div>
+                        <div class="col">
+                              <h5 class="samll-sub mb-1 mt-0"> Our Story </h5>
+                              <h2 class="comon-heading m-0"> About Royal Team </h2>
+                              <p class="mt-3" style="text-align: justify;"> Welcome to our one-stop destination for cricket enthusiasts, where the passion for the game meets the convenience of technology. At <b>6s Cricket</b> , we pride ourselves on being your go-to platform for everything cricket-related. Immerse yourself in the thrilling world of live cricket matches, where you can watch the action unfold in real-time. Stay updated with comprehensive match details, including scores and text-based play-by-play commentary. Dive deep into teams' profiles and get the latest cricket news to stay ahead of the game. Relive the highlights through our curated videos, explore detailed statistics, and track team standings. Whether you're a dedicated fan or a casual viewer, <b>6s Cricket</b> is your virtual stadium, offering an immersive cricket experience that goes beyond the boundaries. Join us in celebrating the spirit of cricket, where every match is more than just a game; it's an unforgettable journey.
+                            </p>
+
+                        </div>
+                   </div>
+               </div>
+           </div>
+
+      </div>
+
+      <div class="our-history-div d-inline-block w-100 mt-5">
+
+
+          <div class="container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+                aria-controls="profile" aria-selected="false"> <i class="fas fa-flag-checkered"></i> Our Mission </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab"
+                 aria-controls="contact" aria-selected="false"> <i class="far fa-eye"></i> Our Vision </button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content mna-bg" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="profile" role="tabpanel">
+                  <div class="container">
+                    <div class="comon-fild-ads1 d-md-flex align-items-center">
+                      <figure>
+                          <img src="{% static 'cricketlive/images/pexels-photo-2973104.jpeg' %}" alt="bg"/>
+                      </figure>
+
+                      <div class="left-history mt-3 mt-md-0">
+                          <h2>"Bringing Cricket to You: Our Mission for a Fun and Exciting Experience"</h2>
+                          <p style="text-align: justify;">  At <b>6s Cricket</b>, our mission is to be the ultimate companion for cricket enthusiasts worldwide. We strive to create an immersive platform that goes beyond traditional cricket-watching experiences, offering a comprehensive hub for live matches, scores, team details, news, highlights, videos, stats, player profiles, and standings. Our commitment is to provide a seamless and enriched journey for cricket lovers, ensuring they stay connected, informed, and engaged with the game they are passionate about. Whether you're a seasoned cricket fanatic or a casual viewer, our mission is to enhance your cricketing adventure and bring you closer to the heart of the sport. Join us as we embark on this mission to make every cricket moment a memorable one for our global community.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel">
+                  <div class="container">
+                    <div class="comon-fild-ads1 d-md-flex align-items-center">
+                      <figure>
+                          <img src="{% static 'cricketlive/images/pexels-photo-12806375.webp' %}" alt="bg"/>
+                      </figure>
+
+                      <div class="left-history mt-3 mt-md-0">
+                          <h2>"Cricket for All: Our Simple Goal to Connect Fans Everywhere" </h2>
+                          <p style="text-align: justify;"> At <b>6s Cricket</b>, our vision is to redefine the way cricket is experienced and enjoyed globally. We aspire to be the foremost digital destination that seamlessly integrates cutting-edge technology with the timeless passion for cricket. Our vision is to create a virtual space where fans, from every corner of the world, can engage with the game on a profound level. Through innovative features and comprehensive content, we aim to foster a community where cricket enthusiasts can connect, share, and celebrate the sport's vibrancy. As we look ahead, our vision is to continually evolve, adapting to the dynamic landscape of cricket, and providing an unparalleled platform that resonates with the diverse and fervent spirit of the cricketing world. Join us on this visionary journey as we elevate the cricket experience for fans across the globe.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+
+      </div>
+
+</section>
+{% endblock content %}
+
+
+{% block js %}
+<script>
+  $(document).ready(function(){
+   $('.achivent-slide').owlCarousel({
+   loop: true,
+   autoplay:true,
+   margin:50,
+   nav: false,
+   dots:true,
+   responsive: {
+       0: {
+           items: 1
+       },
+       600: {
+           items:2
+       },
+       768: {
+         items:3
+       },
+       1000: {
+           items:3
+       },
+       1024: {
+         items:4
+       },
+       1180: {
+         items:4
+       },
+       1200: {
+         items:4
+       }
+   }
+ })
+
+
+ $('.mangemnet-sf').owlCarousel({
+ loop: true,
+ autoplay:true,
+ margin:30,
+ nav: false,
+ dots:true,
+ responsive: {
+     0: {
+         items: 1
+     },
+     375: {
+       items:2
+     },
+     668: {
+         items:2
+     },
+     768: {
+       items:2
+     },
+     820: {
+         items:3
+     },
+     1000: {
+         items:2
+     },
+     1024: {
+       items:3
+     },
+     1180: {
+       items:3
+     },
+     1200: {
+       items:4
+     }
+ }
+})
+
+
+$('.sponj-slide').owlCarousel({
+ loop: true,
+ margin:30,
+ autoplay:true,
+ nav:false,
+ dots:true,
+ responsive: {
+     0: {
+         items:1
+     },
+     375: {
+       items:2
+     },
+     600: {
+         items:2
+     },
+     667: {
+       items:2
+     },
+     1000: {
+         items:6
+     },
+     1000: {
+       items:6
+     }
+ }
+})
+
+ });
+</script>
+{% endblock js %}

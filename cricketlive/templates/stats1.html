@@ -1,0 +1,1895 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Stats{% endblock title %}
+{% block css_internal %}{% endblock css_internal %}
+{% block image_bar1 %}Stats{% endblock image_bar1 %}
+{% block image_bar2 %}Stats{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+
+
+    <div class="startpage d-inline-block w-100">
+
+      <div class="container">
+        <h2 class="main-hed01"> All Records </h2>
+      </div>
+
+      <div class="comoiu-recond d-inline-block w-100">
+         <div class="container">
+
+          <div class="d-lg-flex align-items-center justify-content-between">
+             <h2 class="sub-hedr"> One-Day Internationals </h2>
+             <ul class="nav nav-pills mb-3 mt-4 mt-lg-0" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#team" type="button" role="tab">Team</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#batting" type="button" role="tab">Batting</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#bowling" type="button" role="tab">Bowling</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#allround" type="button" role="tab">All-round</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content mt-4" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="team" role="tabpanel">
+                <div class="coverages-slider owl-carousel owl-theme mt-4">
+                  <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">1</span>
+                        India
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 56 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 6800 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 121 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6>No.1 team in the world in ODI format</h6>
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 42 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4926 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 117 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in ODI format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        South Africa
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555604.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 35 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3821 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 109 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in ODI format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        Pakistan
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555648.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 36 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3922 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 109 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in ODI format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 44 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4536 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 103 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in ODI format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="batting" role="tabpanel">
+                <div class="teams-slider05 owl-carousel owl-theme">
+                  <a href="{% url 'player_details' pk=1070173 %}" class="plya-id d-inline-block w-100">
+                     <div class="teams-oine">
+                      <img alt="tem" src="{% static 'cricketlive/images/5india.jpg' %}"/>
+                      <div class="btn btn-video"> View Profile </div>
+                     </div>
+                     <div class="texr-divb">
+                        <h5> Shubman Gill  (No.1)
+                          <span class="d-block"> IND
+                          </span> </h5>
+
+                        <h2>Ratting: 826 </h2>
+                        <p> Matches: <b> 44 </b>
+                          Average: <b> 61.38 </b> </p>
+
+
+                     </div>
+                  </a>
+
+                  <a href="{% url 'player_details' pk=348144 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/1pak.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Babar Azam (No.2)
+                         <span class="d-block"> PAK
+                         </span> </h5>
+
+                       <h2>Ratting: 824 </h2>
+                       <p> Matches: <b> 117 </b>
+                         Average: <b> 56.72 </b> </p>
+
+
+                    </div>
+                  </a>
+
+                  <a href="{% url 'player_details' pk=253802 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/1india.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Virat Kohli  (No.3)
+                         <span class="d-block"> IND
+                         </span> </h5>
+
+                       <h2>Ratting: 791 </h2>
+                       <p> Matches: <b> 292 </b>
+                         Average: <b> 58.68 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="{% url 'player_details' pk=34102 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/2india.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Rohit Sharma  (No.4)
+                         <span class="d-block"> IND
+                           </span> </h5>
+
+                       <h2>Ratting: 769 </h2>
+                       <p> Matches: <b> 262 </b>
+                         Average: <b> 49.12 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="{% url 'player_details' pk=381743 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/4nz.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Daryl Mitchell (No.5)
+                         <span class="d-block"> NZ,
+                           rhb </span> </h5>
+
+                       <h2>Ratting: 750 </h2>
+                       <p> Matches: <b> 39 </b>
+                         Average: <b> 52.56 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="{% url 'player_details' pk=219889 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/1aus.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> David Warner   (No.6)
+                         <span class="d-block"> AUS
+                            </span> </h5>
+
+                       <h2>Ratting: 745 </h2>
+                       <p> Matches: <b> 161 </b>
+                         Average: <b> 45.01 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+
+
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="bowling" role="tabpanel">
+                <div class="teams-slider05 owl-carousel owl-theme">
+                  <a href="#" class="plya-id d-inline-block w-100">
+                     <div class="teams-oine">
+                      <img alt="tem" src="{% static 'cricketlive/images/3bsa.WEBP' %}"/>
+                      <div class="btn btn-video"> View Profile </div>
+                     </div>
+                     <div class="texr-divb">
+                        <h5> Keshav Maharaj  (No.1)
+                          <span class="d-block"> SA
+                          </span> </h5>
+
+                        <h2>Ratting: 741 </h2>
+                        <p> Innings: <b> 42 </b>
+                          Average: <b> 30.73 </b> </p>
+
+
+                     </div>
+                  </a>
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/2baus.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Josh Hazlewood  (No.2)
+                         <span class="d-block"> AUS
+                           </span> </h5>
+
+                       <h2>Ratting: 703 </h2>
+                       <p> Innings: <b> 85 </b>
+                         Average: <b> 26.61 </b> </p>
+
+
+                    </div>
+                  </a>
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/3bindia.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Mohammed Siraj  (No.3)
+                         <span class="d-block"> IND
+                            </span> </h5>
+
+                       <h2>Ratting: 699 </h2>
+                       <p> Innings: <b> 41 </b>
+                         Average: <b> 22.81 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/2bindia.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Jasprit Bumrah  (No.4)
+                         <span class="d-block"> IND
+                            </span> </h5>
+
+                       <h2>Ratting: 685 </h2>
+                       <p> Innings: <b> 89 </b>
+                         Average: <b> 23.55 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/4baus.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Adam Zampa  (No.5)
+                         <span class="d-block"> AUS
+                            </span> </h5>
+
+                       <h2>Ratting: 675 </h2>
+                       <p> Innings: <b> 96 </b>
+                         Average: <b> 28.13 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/1bafg.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Rashid Khan  (No.6)
+                         <span class="d-block"> AFG
+                            </span> </h5>
+
+                       <h2>Ratting: 667 </h2>
+                       <p> Innings: <b> 103 </b>
+                         Average: <b> 19.64 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+
+
+               </div>
+              </div>
+
+              <div class="tab-pane fade" id="allround" role="tabpanel">
+                <div class="teams-slider05 owl-carousel owl-theme">
+                  <a href="{% url 'player_details' pk=56143 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/4bang.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Shakib Al Hasan  (No.1)
+                         <span class="d-block"> BANG
+                           </span> </h5>
+
+                       <h2>Ratting: 330 </h2>
+                       <p> Innings: <b> 247 </b>
+                         Average: <b> 37.11 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                  <a href="{% url 'player_details' pk=25913 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/2bafg.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Mohammad Nabi   (No.2)
+                         <span class="d-block"> AFG
+                          </span> </h5>
+
+                       <h2>Ratting: 297 </h2>
+                       <p> Innings: <b> 156 </b>
+                         Average: <b> 25.98 </b> </p>
+
+
+                    </div>
+                  </a>
+
+                  <a href="{% url 'player_details' pk=299572 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/ski.WEBP' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Sikandar Raza   (No.3)
+                         <span class="d-block"> ZIM
+                          </span> </h5>
+
+                       <h2>Ratting: 287 </h2>
+                       <p> Innings: <b> 139 </b>
+                         Average: <b> 36.99 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/1bafg.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Rashid Khan   (No.4)
+                         <span class="d-block"> AFG
+                            </span> </h5>
+
+                       <h2>Ratting: 265 </h2>
+                       <p> Innings: <b> 103 </b>
+                         Average: <b> 19.64 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="{% url 'player_details' pk=325026 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/10baus.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Glenn Maxwell  (No.5)
+                         <span class="d-block"> AUS
+                            </span> </h5>
+
+                       <h2>Ratting: 252 </h2>
+                       <p> Innings: <b> 138 </b>
+                         Average: <b> 35.41 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+                  <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/3pa.WEBP' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Assadollah Vala   (No.6)
+                         <span class="d-block"> PG
+                          </span> </h5>
+
+                       <h2>Ratting: 248 </h2>
+                       <p> Innings: <b> 66 </b>
+                         Average: <b> 30.41 </b> </p>
+
+
+                    </div>
+                  </a>
+
+
+
+
+               </div>
+              </div>
+          </div>
+
+
+
+         </div>
+      </div>
+
+
+      <div class="comoiu-recond tet-div d-inline-block w-100 mt-5">
+        <div class="container">
+
+         <div class="d-lg-flex align-items-center justify-content-between">
+            <h2 class="sub-hedr"> T20 Match </h2>
+            <ul class="nav nav-pills mb-3 mt-4 mt-lg-0" id="pills-tab" role="tablist">
+             <li class="nav-item" role="presentation">
+               <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#t02team" type="button" role="tab">Team</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t02batting" type="button" role="tab">Batting</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t02bowling" type="button" role="tab">Bowling</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t02allround" type="button" role="tab">All-round</button>
+             </li>
+           </ul>
+         </div>
+
+         <div class="tab-content mt-4" id="pills-tabContent">
+             <div class="tab-pane fade show active" id="t02team" role="tabpanel">
+               <div class="coverages-slider owl-carousel owl-theme mt-4">
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">1</span>
+                        India
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 68 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 18,041 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 265 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> No.1 best team in the world in T20 format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        England
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555527.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 46 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 11,816 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 257 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in T20 format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 53 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 13,534</span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 255 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in T20 format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        Pakistan
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555648.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 53 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 13,325 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 251 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in T20 format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 39 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 9,760 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 250 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in T20 format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+               </div>
+             </div>
+
+             <div class="tab-pane fade" id="t02batting" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+                 <a href="{% url 'player_details' pk=446507 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/6india.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Surya Kumar Yadav  (No.1)
+                         <span class="d-block"> IND
+                           </span> </h5>
+
+                       <h2>Ratting: 865 </h2>
+                       <p> Innings: <b> 60 </b>
+                         Average: <b> 45.55 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=323389 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/2pak.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5>
+                        Mohammad Rizwan  (No.2)
+                        <span class="d-block"> PAK
+                           </span> </h5>
+
+                      <h2>Ratting: 787 </h2>
+                      <p> Innings: <b> 85 </b>
+                        Average: <b> 49.07 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=600498 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/4sa.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Aiden Markram  (No.3)
+                        <span class="d-block"> SA
+                           </span> </h5>
+
+                      <h2>Ratting: 758 </h2>
+                      <p> Innings: <b>39 </b>
+                        Average: <b> 38.55 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=348144 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1pak.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Babar Azam   (No.4)
+                        <span class="d-block"> PAK
+                          </span> </h5>
+
+                      <h2>Ratting: 734 </h2>
+                      <p> Innings: <b> 104 </b>
+                        Average: <b> 41.49 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=318845 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/RILE.webp' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Rilee Rossouw  (No.5)
+                        <span class="d-block"> SA
+                           </span> </h5>
+
+                      <h2>Ratting: 695 </h2>
+                      <p> Innings: <b> 29 </b>
+                        Average: <b> 34.86 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=236489 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/4eng.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Dawid Malan  (No.6)
+                        <span class="d-block"> ENG
+                           </span> </h5>
+
+                      <h2>Ratting: 691 </h2>
+                      <p> Innings: <b> 62 </b>
+                        Average: <b> 36.38 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+
+
+               </div>
+             </div>
+
+             <div class="tab-pane fade" id="t02bowling" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+                 <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/ravi.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Ravi Bishnoi  (No.1)
+                         <span class="d-block"> IND,
+                           rhb </span> </h5>
+
+                       <h2> 692 </h2>
+                       <p> Innings: <b> 21 </b>
+                         Average: <b> 6 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1bafg.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Rashid Khan   (No.2)
+                        <span class="d-block"> AFG,
+                          rhb </span> </h5>
+
+                      <h2> 485 </h2>
+                      <p> Innings: <b> 82 </b>
+                        Average: <b> 14.8 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/WANI.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Wanindu Hasaranga   (No.3)
+                        <span class="d-block"> SL
+                           </span> </h5>
+
+                      <h2> 679 </h2>
+                      <p> Innings: <b> 58 </b>
+                        Average: <b> 14.03 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/4beng.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Adil Rashid  (No.4)
+                        <span class="d-block"> NZ,
+                          rhb </span> </h5>
+
+                      <h2> 679 </h2>
+                      <p> Innings: <b> 102 </b>
+                        Average: <b> 6.25 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/MTS.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Maheesh Theekshana  (No.5)
+                        <span class="d-block"> SL
+                           </span> </h5>
+
+                      <h2> 677 </h2>
+                      <p> Innings: <b> 38</b>
+                        Average: <b> 3.78 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/sam.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Sam Curran   (No.6)
+                        <span class="d-block"> ENG,
+                          rhb </span> </h5>
+
+                      <h2> 659 </h2>
+                      <p> Innings: <b> 44 </b>
+                        Average: <b> 13.05 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+
+
+              </div>
+             </div>
+
+             <div class="tab-pane fade" id="t02allround" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+
+                <a href="{% url 'player_details' pk=56143 %}" class="plya-id d-inline-block w-100">
+                  <div class="teams-oine">
+                   <img alt="tem" src="{% static 'cricketlive/images/4bang.png' %}"/>
+                   <div class="btn btn-video"> View Profile </div>
+                  </div>
+                  <div class="texr-divb">
+                     <h5> Shakib Al Hasan   (No.1)
+                       <span class="d-block"> BANG
+                          </span> </h5>
+
+                     <h2>Ranking: 272 </h2>
+                     <p> Innings: <b> 117 </b>
+                       Average: <b> 23.82 </b> </p>
+
+
+                  </div>
+                </a>
+                 <a href="{% url 'player_details' pk=600498 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/4sa.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Aiden Markram   (No.2)
+                        <span class="d-block"> SA,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 212 </h2>
+                      <p> Innings: <b> 39 </b>
+                        Average: <b> 38.55 </b> </p>
+
+
+                   </div>
+                </a>
+
+                 <a href="{% url 'player_details' pk=25913 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/2bafg.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Mohammad Nabi   (No.3)
+                        <span class="d-block"> AFG,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 210 </h2>
+                      <p> Innings: <b> 108 </b>
+                        Average: <b> 22.26 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=625371 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/HARDIK.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Hardik Pandya   (No.4)
+                        <span class="d-block"> IND,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 200 </h2>
+                      <p> Innings: <b> 92 </b>
+                        Average: <b> 25.43 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=325012 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/MAR.JPG' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Marcus Stoinis   (No.5)
+                        <span class="d-block"> AUS
+                           </span> </h5>
+
+                      <h2>Ranking: 187 </h2>
+                      <p> Innings: <b> 57 </b>
+                        Average: <b> 30.5 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=299572 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/ski.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Sikandar Raza   (No.6)
+                        <span class="d-block"> ZIM,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 187 </h2>
+                      <p> Innings: <b> 78 </b>
+                        Average: <b> 25.34 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=784379 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/WANI.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Wanindu Hasaranga (No.7)
+                        <span class="d-block"> SL,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 178 </h2>
+                      <p> Innings: <b> 58 </b>
+                        Average: <b> 14.03 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+
+
+              </div>
+             </div>
+         </div>
+
+
+
+        </div>
+      </div>
+
+
+      <div class="comoiu-recond d-inline-block w-100 mt-5">
+        <div class="container">
+
+         <div class="d-lg-flex align-items-center justify-content-between">
+            <h2 class="sub-hedr"> Internationals Test </h2>
+            <ul class="nav nav-pills mb-3 mt-4 mt-lg-0" id="pills-tab" role="tablist">
+             <li class="nav-item" role="presentation">
+               <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#testteam" type="button" role="tab">Team</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#testbatting" type="button" role="tab">Batting</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#testbowling" type="button" role="tab">Bowling</button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#testallround" type="button" role="tab">All-round</button>
+             </li>
+           </ul>
+         </div>
+
+         <div class="tab-content mt-4" id="pills-tabContent">
+             <div class="tab-pane fade show active" id="testteam" role="tabpanel">
+               <div class="coverages-slider owl-carousel owl-theme mt-4">
+
+                   <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">1</span>
+                        India
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206606.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 29 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3,434 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 118 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> No.1 best team in the world in Test format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">2</span>
+                        Australia
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/206618.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 30 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 3,534 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 118 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 2nd best team in the world in Test format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">3</span>
+                        England
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555527.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 43 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 4,941 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 115 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 3rd best team in the world in Test format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">4</span>
+                        South Africa
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/555604.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 21 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 2,182 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 104 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 4th best team in the world in Test format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+                    <div class="comon-teams-poins d-inline-block w-100">
+                      <h5> <span class="noi">5</span>
+                         New Zealand
+                      </h5>
+                      <figure>
+                        <img alt="fiu" src="{% static 'cricketlive/images/5372867.png' %}"/>
+                      </figure>
+                      <hr/>
+                      <ul class="d-flex align-items-center justify-content-between">
+                        <li>
+                          <span> 26 </span>
+                          <span> Played </span>
+                        </li>
+                        <li>
+                          <span> 2,471 </span>
+                          <span> Points </span>
+                        </li>
+                        <li>
+                          <span> 95 </span>
+                          <span> Rating </span>
+                        </li>
+                      </ul>
+
+                      <h6 class="mt-3"> Recent form </h6>
+                      <div class="linrt">
+                         <ul class="d-flex align-items-center">
+                             <h6> 5th best team in the world in Test format</h6>
+<!--                           <li> W </li>-->
+<!--                           <li> W </li>-->
+<!--                           <li class="lo"> L </li>-->
+<!--                           <li> W </li>-->
+
+                         </ul>
+                      </div>
+                  </div>
+
+
+               </div>
+             </div>
+
+             <div class="tab-pane fade" id="testbatting" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+                 <a href="{% url 'player_details' pk=277906 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/3nz.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Kane Williamson  (No.1)
+                         <span class="d-block"> NZ
+                            </span> </h5>
+
+                       <h2>Ranking: 864 </h2>
+                       <p> Innings: <b> 96 </b>
+                         Average: <b> 54.36 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=303669 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/2eng.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5>
+                        Joe Root  (No.2)
+                        <span class="d-block"> ENG
+                           </span> </h5>
+
+                      <h2>Ranking: 485 </h2>
+                      <p> Innings: <b> 135 </b>
+                        Average: <b> 50.29 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=267192 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/4aus.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Steve Smith   (No.3)
+                        <span class="d-block"> AUS,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 842 </h2>
+                      <p> Innings: <b> 103 </b>
+                        Average: <b> 58.36 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=348144 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1pak.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Babar Azam   (No.4)
+                        <span class="d-block"> PAK,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 829 </h2>
+                      <p> Innings: <b> 50 </b>
+                        Average: <b> 47.0 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=787987 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/6aus.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Marnus Labuschagne   (No.5)
+                        <span class="d-block"> AUS,
+                          rhb </span> </h5>
+
+                      <h2>Ranking: 826 </h2>
+                      <p> Innings: <b> 44 </b>
+                        Average: <b> 55.15 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="{% url 'player_details' pk=530011 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/2aus.png' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Travis Head   (No.6)
+                        <span class="d-block"> AUS
+                           </span> </h5>
+
+                      <h2>Ranking: 818 </h2>
+                      <p> Innings: <b> 43 </b>
+                        Average: <b> 44.82 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+
+
+               </div>
+             </div>
+
+             <div class="tab-pane fade" id="testbowling" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+                 <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/8bindia.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Ravichandran Ashwin  (No.1)
+                         <span class="d-block"> IND
+                            </span> </h5>
+
+                       <h2>Ranking: 879 </h2>
+                       <p> Innings: <b> 94 </b>
+                         Average: <b> 23.66 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/2bsa.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Kagiso Rabada    (No.2)
+                        <span class="d-block"> SA
+                          </span> </h5>
+
+                      <h2>Ranking: 825 </h2>
+                      <p> Innings: <b> 60 </b>
+                        Average: <b> 22.34 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1bindia.jpeg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Ravindra Jadeja   (No.3)
+                        <span class="d-block"> IND
+                           </span> </h5>
+
+                      <h2>Ranking: 782 </h2>
+                      <p> Innings: <b> 67 </b>
+                        Average: <b> 36.42 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/3baus.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Pat Cummins   (No.4)
+                        <span class="d-block"> AUS
+                          </span> </h5>
+
+                      <h2>Ranking: 775 </h2>
+                      <p> Innings: <b> 56 </b>
+                        Average: <b> 22.85 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1bpak.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Shaheen Afridi   (No.5)
+                        <span class="d-block"> PAK
+                           </span> </h5>
+
+                      <h2>Ranking: 420 </h2>
+                      <p> Innings: <b> 28 </b>
+                        Average: <b> 26.71 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/oile.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Ollie Robinson   (No.6)
+                        <span class="d-block"> ENG
+                           </span> </h5>
+
+                      <h2>Ranking: 762 </h2>
+                      <p> Innings: <b> 19 </b>
+                        Average: <b> 13.53 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+
+
+              </div>
+             </div>
+
+             <div class="tab-pane fade" id="testallround" role="tabpanel">
+               <div class="teams-slider05 owl-carousel owl-theme">
+
+                 <a href="{% url 'player_details' pk=234675 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/1bindia.jpeg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Ravindra Jadeja   (No.1)
+                        <span class="d-block"> IND
+                           </span> </h5>
+
+                      <h2>Ranking: 455 </h2>
+                      <p> Innings: <b> 67 </b>
+                        Average: <b> 36.42 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/8bindia.jpg' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5>Ravichandran Ashwin (No.2)
+                         <span class="d-block"> IND
+                            </span> </h5>
+                       <h2>Ranking: 370 </h2>
+                       <p> Innings: <b> 94 </b>
+                         Average: <b> 23.66 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                  <a href="{% url 'player_details' pk=56143 %}" class="plya-id d-inline-block w-100">
+                    <div class="teams-oine">
+                     <img alt="tem" src="{% static 'cricketlive/images/4bang.png' %}"/>
+                     <div class="btn btn-video"> View Profile </div>
+                    </div>
+                    <div class="texr-divb">
+                       <h5> Shakib Al Hasan  (No.3)
+                         <span class="d-block"> BANG
+                           </span> </h5>
+
+                       <h2>Ratting: 320 </h2>
+                       <p> Innings: <b> 247 </b>
+                         Average: <b> 37.11 </b> </p>
+
+
+                    </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=311158 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/bens.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Ben Stokes   (No.4)
+                        <span class="d-block"> ENG
+                          </span> </h5>
+
+                      <h2>Ratting: 307 </h2>
+                      <p> Innings: <b> 97 </b>
+                        Average: <b> 32.08 </b> </p>
+
+
+                   </div>
+                 </a>
+
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/axar.jpg' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Akshar Patel   (No.5)
+                        <span class="d-block"> IND
+                           </span> </h5>
+
+                      <h2>Ratting: 298 </h2>
+                      <p> Innings: <b> 12 </b>
+                        Average: <b> 17.16 </b> </p>
+
+
+                   </div>
+                 </a>
+
+                 <a href="{% url 'player_details' pk=303669 %}" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/joe.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Joe Root   (No.6)
+                        <span class="d-block"> ENG
+                           </span> </h5>
+                      <h2>Ratting: 286 </h2>
+                      <p> Innings: <b> 135 </b>
+                        Average: <b> 50.29 </b> </p>
+                   </div>
+                 </a>
+
+                 <a href="#" class="plya-id d-inline-block w-100">
+                   <div class="teams-oine">
+                    <img alt="tem" src="{% static 'cricketlive/images/jason.WEBP' %}"/>
+                    <div class="btn btn-video"> View Profile </div>
+                   </div>
+                   <div class="texr-divb">
+                      <h5> Jason Holder  (No.7)
+                        <span class="d-block"> WI
+                           </span> </h5>
+
+                      <h2>Ratting: 280 </h2>
+                      <p> Innings: <b> 64 </b>
+                        Average: <b> 29.22 </b> </p>
+
+                   </div>
+                 </a>
+              </div>
+             </div>
+         </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+$(document).ready(function() {
+  $('.coverages-slider').owlCarousel({
+    loop: true,
+    margin:20,
+    autoplay:true,
+    nav:false,
+    dots:true,
+    responsive: {
+        0: {
+            items:1
+        },
+        600: {
+            items:1
+        },
+        667: {
+          items:2
+        },
+        1000: {
+            items:2
+        },
+        1024: {
+          items:4
+        }
+    }
+   })
+
+   $('.teams-slider05').owlCarousel({
+    loop: true,
+    margin:20,
+    autoplay:true,
+    nav:false,
+    dots:true,
+    responsive: {
+        0: {
+            items:1
+        },
+        600: {
+            items:1
+        },
+        668: {
+          items:2
+        },
+        1000: {
+            items:2
+        },
+        1024: {
+          items:5
+        }
+    }
+   })
+
+});
+</script>
+<script>
+
+  $(document).ready(function() {
+var table = $('#matchess').removeAttr('width').DataTable( {
+
+columnDefs: [
+    { width: 200, targets: 0 }
+],
+fixedColumns: true,
+"paging": false
+} );
+} );
+
+
+$(document).ready(function() {
+var table = $('#matchess2').removeAttr('width').DataTable( {
+
+  columnDefs: [
+      { width: 200, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+$(document).ready(function() {
+var table = $('#matchess3').removeAttr('width').DataTable( {
+  columnDefs: [
+      { width: 100, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+</script>
+
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+
+{% endblock js %}

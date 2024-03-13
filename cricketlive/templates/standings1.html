@@ -1,0 +1,757 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Standing{% endblock title %}
+{% block image_bar1 %}Standing{% endblock image_bar1 %}
+{% block image_bar2 %}Standing{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0">
+
+    <div class="startpage standing01 d-inline-block w-100">
+         <div class="container">
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="dim" role="tabpanel">
+                    <div class="cominu-feterx d-inline-block w-100">
+
+
+                        <h3 class="mt-5 mb-3">Team Standing</h3>
+
+
+                        <table id="matchess" class="table table-striped order-column dt-responsive nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th>TEAM</th>
+                                    <th>PLAYED</th>
+                                    <th>WON</th>
+                                    <th>LOST</th>
+                                    <th>N/R</th>
+                                    <th>Group</th>
+                                    <th>NET RR</th>
+                                    <th>POINTS </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if data5 %}
+                                {% for match in data5 %}
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> {{match.standing_place}} </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span class="anmuir">  {{match.standing_team}} </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{match.standing_MP}}</td>
+                                    <td>{{match.standing_W}}</td>
+                                    <td>{{match.standing_L}}</td>
+                                    <td>{{match.standing_NR}}</td>
+                                    <td>{{match.league_round}}</td>
+                                    <td>{{match.standing_NRR}}</td>
+                                    <td>{{match.standing_Pts}}</td>
+
+                                </tr>
+                                {% endfor %}
+                                {% else %}
+                                    <h1> No Standing data available</h1>
+                                {% endif %}
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="t20m" role="tabpanel">
+                    <div class="cominu-feterx d-inline-block w-100">
+
+
+                        <h3 class="mt-5 mb-3"> T20 Team Ratings </h3>
+
+
+                        <table id="matchess2" class="table table-striped order-column dt-responsive nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th>TEAM</th>
+                                    <th>PLAYED</th>
+                                    <th>WON</th>
+                                    <th>LOST</th>
+                                    <th>N/R</th>
+                                    <th>TIED</th>
+                                    <th>NET RR</th>
+                                    <th>POINTS </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 1 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">  South Africa </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 2 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> India </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 3 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> Australia </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 4 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> New Zealand </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 5 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> Afghanistan </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 6 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">  Sri Lanka </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 7 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <div class="name-team d-flex align-items-center">
+                                                    <span>
+                                                        <span class="sm-iconj">
+                                                            <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                        </span>
+                                                    </span>
+                                                    <span class="anmuir">   Bangladesh </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 8 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">   Pakistan </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 9 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <div class="name-team d-flex align-items-center">
+                                                    <span>
+                                                        <span class="sm-iconj">
+                                                            <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                        </span>
+                                                    </span>
+                                                    <span class="anmuir">   West Indies </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 10 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">   Keniya </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="testm" role="tabpanel">
+                    <div class="cominu-feterx d-inline-block w-100">
+
+
+                        <h3 class="mt-5 mb-3"> Test Team Ratings </h3>
+
+
+                        <table id="matchess3" class="table table-striped order-column dt-responsive nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th>TEAM</th>
+                                    <th>PLAYED</th>
+                                    <th>WON</th>
+                                    <th>LOST</th>
+                                    <th>N/R</th>
+                                    <th>TIED</th>
+                                    <th>NET RR</th>
+                                    <th>POINTS </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 1 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">  South Africa </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 2 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> India </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 3 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> Australia </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 4 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> New Zealand </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 5 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir"> Afghanistan </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 6 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">  Sri Lanka </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 7 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <div class="name-team d-flex align-items-center">
+                                                    <span>
+                                                        <span class="sm-iconj">
+                                                            <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                        </span>
+                                                    </span>
+                                                    <span class="anmuir">   Bangladesh </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 8 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">   Pakistan </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 9 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <div class="name-team d-flex align-items-center">
+                                                    <span>
+                                                        <span class="sm-iconj">
+                                                            <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                        </span>
+                                                    </span>
+                                                    <span class="anmuir">   West Indies </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                      <span class="iconm"> 10 </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex fetuexr align-items-center">
+                                            <div class="name-team d-flex align-items-center">
+                                                <span>
+                                                    <span class="sm-iconj">
+                                                        <img src="{% static 'cricketlive/images/teaam1.jpg' %}" alt="je"/>
+                                                    </span>
+                                                </span>
+                                                <span class="anmuir">   Keniya </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>2</td>
+                                    <td>1200</td>
+                                    <td>110</td>
+                                    <td>59.33</td>
+                                    <td>1</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+
+  $(document).ready(function() {
+var table = $('#matchess').removeAttr('width').DataTable( {
+
+columnDefs: [
+    { width: 200, targets: 0 }
+],
+fixedColumns: true,
+"paging": false
+} );
+} );
+
+
+$(document).ready(function() {
+var table = $('#matchess2').removeAttr('width').DataTable( {
+
+  columnDefs: [
+      { width: 200, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+$(document).ready(function() {
+var table = $('#matchess3').removeAttr('width').DataTable( {
+  columnDefs: [
+      { width: 100, targets: 0 }
+  ],
+  fixedColumns: true,
+  "paging": false
+} );
+} );
+
+</script>
+
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+{% endblock js %}

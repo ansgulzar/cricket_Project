@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Update live{% endblock title %}
+{% block image_bar1 %}Update live{% endblock image_bar1 %}
+{% block image_bar2 %}Update live{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 mtches-divbnh01 body-part pt-0">
+
+  <div class="next-matches d-inline-block w-100">
+    <div class="container">
+    <h1>{{title}}</h1>
+              <div class="matches-seduels d-inline-block w-100">
+          <div class="container">
+              <h1>Live Match Update Data</h1>
+              <form method="post" action="">
+                      {% csrf_token %}
+                      <label for="{{ live_form.title.id_for_label }}">Video Title:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      {{ live_form.title }}<br /><br />
+
+                      <label for="{{ live_form.thumbnail.id_for_label }}">Video Thumbnail:</label>
+                      {{ live_form.thumbnail }}<br><br />
+
+                      <label for="{{ live_form.video_url.id_for_label }}">Video Url:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      {{ live_form.video_url }}<br /><br />
+
+                      <label for="{{ live_form.video_date.id_for_label }}">Video Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      {{ live_form.video_date }}<br /><br />
+
+                      {% if live_form.errors %}
+                          <p style="color: red;">Please fill in all required fields.</p>
+                      {% endif %}
+                      <button class="video_button" type="submit" name="update">Update Live</button>
+              </form>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
+{% endblock content %}

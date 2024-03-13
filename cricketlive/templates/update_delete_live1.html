@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Update Live{% endblock title %}
+{% block css_internal %}
+<style>
+
+    .fa-solid .fa-play {
+  font-size: 800px; /* You can adjust the size as needed */
+}
+
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* You can customize the size and style of the play button */
+      width: 300px;
+      height: 300px;
+      /* background-color: #3498db; */
+      border: none;
+      /* border-radius: 50%; */
+      color: black;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .change-my-color:hover {
+        fill: red;
+      }
+    .change-my-color {
+        fill: black;
+      }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    @media only screen and (max-width: 992px) {
+      .btn-play svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .btn-play svg{
+          width: 50px;
+          height: 50px;
+        }
+        }
+    .video-js {
+        width: 1200px !important;
+        height: 700px !important;
+    }
+  </style>
+        <style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+    }
+    .styled-table thead tr {
+        background-color: #FFC72C;
+        color: black;
+        text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+    .styled-table tbody tr:nth-last-child(1) {
+        background-color: #F0E68C; /* Green for the last row */
+    }
+
+    .styled-table tbody tr:nth-last-child(2) {
+        background-color: #F0E68C; /* Black for the second-last row */
+        color: black;
+    }
+
+    .styled-table tbody tr:nth-last-child(3) {
+        background-color: #F0E68C; /* Yellow for the third-last row */
+    }
+     @media only screen and (max-width: 768px) {
+        .styled-table {
+            font-size: 0.7em; /* Further decrease text size on smaller screens */
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 6px 8px; /* Further reduce padding on smaller screens */
+        }
+    }
+    </style>
+{% endblock css_internal %}
+{% block back %}
+              <button
+                  class="btn login-btn-links" style="background: #47c947">
+                  <a href="{% url 'data_entry' %}" }>Back to data entry</a>
+                </button>
+{% endblock back %}
+{% block logout %}
+            <button class="btn login-btn-links" style="background: #ffc107">
+                  <a href="{% url 'logoutview' %}" }>Logout</a>
+            </button>
+{% endblock logout %}
+{% block image_bar1 %}Update Live{% endblock image_bar1 %}
+{% block image_bar2 %}Update Live{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 mtches-divbnh01 body-part pt-0">
+
+  <div class="next-matches d-inline-block w-100">
+    <div class="container">
+    <h1>{{title}}</h1>
+              <div class="matches-seduels d-inline-block w-100">
+          <div class="container">
+              <h1>Live Matches Data</h1>
+                      <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th></th>
+                                <th>Thumbnail</th>
+                                <th></th>
+                                <th>Video Url</th>
+                                <th></th>
+                                <th>Date</th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in items %}
+                        <tr>
+                            <td>{{item.title}}</td>
+                            <td></td>
+                            <td>{{item.thumbnail}}</td>
+                            <td></td>
+                            <td>{{item.video_url}}</td>
+                            <td></td>
+                            <td>{{item.video_date}}</td>
+                            <td></td>
+                            <td style="display: flex;">
+                                <div style="display: inline-block;">
+                                    <a href="{% url 'update' item.id %}" style="font-size: 20px; border-radius: 6px; border: black; background: black; color: white; display: inline-block; padding: 10px;">Edit</a>
+                                </div> &nbsp;&nbsp;&nbsp;
+
+                                <div style="display: inline-block;">
+                                    <form action="{% url 'delete' item.id %}" method="POST">
+                                         {% csrf_token %}
+                                            <input style="font-size: 20px; border-radius: 6px; border: red; background: red; color: white; display: inline-block; padding: 10px;" type="submit" value="Delete">
+                                    </form>
+
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
+{% endblock content %}

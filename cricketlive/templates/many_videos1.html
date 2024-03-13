@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Videos{% endblock title %}
+{% block css_internal %}
+       <style>
+
+    .fa-solid .fa-play {
+  font-size: 800px; /* You can adjust the size as needed */
+}
+
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* You can customize the size and style of the play button */
+      width: 300px;
+      height: 300px;
+      /* background-color: #3498db; */
+      border: none;
+      /* border-radius: 50%; */
+      color: black;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .change-my-color:hover {
+        fill: red;
+      }
+    .change-my-color {
+        fill: rgb(224, 17, 17);
+      }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    @media only screen and (max-width: 992px) {
+      .btn-play svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .btn-play svg{
+          width: 50px;
+          height: 50px;
+        }
+        }
+  </style>
+      <style>
+          .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px;
+  max-width: 1200px; /* optional */
+  margin: 0 auto; /* optional */
+}
+
+/* (A2) SMALL SCREENS - 2 IMAGES PER ROW */
+@media screen and (max-width: 768px) {
+  .gallery { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+/* (B) GALLERY VIDEOS */
+/* (B1) THUMBNAIL VIDEO */
+.gallery video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* fill | contain | cover | scale-down */
+  cursor: pointer;
+}
+
+/* (B2) FULLSCREEN VIDEO */
+.gallery video.full {
+  position: fixed;
+  top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
+  background: #000;
+  object-fit: scale-down;
+}
+
+/* (C) EXIT FULLSCREEN */
+#vClose {
+  position: fixed; display: none;
+  top: 0; right: 0; z-index: 9999;
+  font-size: 20px; font-weight: 700;
+  padding: 10px 15px;
+  color: #fff;
+  background: #741414;
+  cursor: pointer;
+}
+#vClose.show { display: block; }
+    .trecty {
+        margin-top: 10px;
+        margin-right: 30px;
+
+    }
+    .comon-vedo-divu .trecty h5 {
+        margin-top: 1px;
+        margin-left: 25px;
+    }
+
+      </style>
+{% endblock css_internal %}
+{% block image_bar1 %}Videos{% endblock image_bar1 %}
+{% block image_bar2 %}Videos{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part mtches-divbnh01 pt-0" style="display: inline">
+    <br><br>
+                <div class="gallery">
+                    {% for item in latest%}
+                    <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" data-bs-target="#myModal" class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                      <div class="vio-imghj">
+                        <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}" />
+                        <div class="btn-play">
+                          <svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512">
+                            <path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="trecty">
+                        <h5>{{item.title}}</h5>
+                      </div>
+                    </a>
+                    {% endfor %}
+                    {% for item in magical %}
+                    <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" data-bs-target="#myModal" class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                      <div class="vio-imghj">
+                        <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}" />
+                        <div class="btn-play">
+                          <svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512">
+                            <path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="trecty">
+                        <h5>{{item.title}}</h5>
+                      </div>
+                    </a>
+                    {% endfor %}
+                    {% for item in great_innings %}
+                    <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" data-bs-target="#myModal" class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                      <div class="vio-imghj">
+                        <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}" />
+                        <div class="btn-play">
+                          <svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512">
+                            <path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="trecty">
+                        <h5>{{item.title}}</h5>
+                      </div>
+                    </a>
+                    {% endfor %}
+                    {% for item in highlights %}
+                    <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" data-bs-target="#myModal" class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                      <div class="vio-imghj">
+                        <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}" />
+                        <div class="btn-play">
+                          <svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512">
+                            <path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="trecty">
+                        <h5>{{item.title}}</h5>
+                      </div>
+                    </a>
+                    {% endfor %}
+                    {% for item in enjoyable %}
+                    <a href="{% url 'videoplayer' pk=item.video_url title=item.title %}" data-bs-target="#myModal" class="play-button comon-vedo-divu d-inline-block w-100 position-relative">
+                      <div class="vio-imghj">
+                        <img alt="su" style="object-fit: contain" src="{{item.thumbnail}}" />
+                        <div class="btn-play">
+                          <svg class="change-my-color" xmlns="http://www.w3.org/2000/svg" height="55" width="55" viewBox="0 0 512 512">
+                            <path class="inner-layer" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="trecty">
+                        <h5>{{item.title}}</h5>
+                      </div>
+                    </a>
+                    {% endfor %}
+                </div>
+    <br><br>
+</section>
+{% endblock content %}

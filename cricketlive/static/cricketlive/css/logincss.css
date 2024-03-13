@@ -1,0 +1,42 @@
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    /*margin-bottom: 5px;*/
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 40%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+    /* Increase button size and change its color */
+    input[type="submit"] {
+        padding: 12px; /* Increase padding for button size */
+        background-color: #ffc107; /* Change background color */
+        color: #ffffff; /* Change text color */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        height: 50px;
+        width: 150px;
+        margin-left: 9%;
+        font-size: 19px;
+    }
+
+    /* Hover effect for the button */
+    input[type="submit"]:hover {
+        background-color: #ffac07 ; /* Change background color on hover */
+    }
+    .containerr {
+        margin-left: 37%;
+    }

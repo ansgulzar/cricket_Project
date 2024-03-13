@@ -1,0 +1,523 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Player Details{% endblock title %}
+{% block image_bar1 %}Player Details{% endblock image_bar1 %}
+{% block image_bar2 %}Player Details{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part pt-0 pb-5">
+     <div class="plyaers-divbn-details d-inline-block w-100 pt-5">
+        <div class="container">
+            <div class="row gy-4 g-lg-5">
+                <div class="col-lg-3">
+                    <figure class="py-us">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320/lsci{{data.headshotImageUrl}}"> alt="pnnm"/>
+                    </figure>
+                    <div class="tesmpa">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320/lsci{{data.country.image.url}}" alt="amnj"/>
+                    </div>
+
+                    <div class="most-playerd-vides d-inline-block w-100">
+                        <h5> MOST VIEWED PLAYERS </h5>
+                        <ul>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/5aus.png' %}"/>
+                              </div>
+                              <span class="ms-3"> Glenn Maxwell </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/1india.png' %}"/>
+                              </div>
+                              <span class="ms-3"> Virat Kohli</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/1pak.jpg' %}"/>
+                              </div>
+                              <span class="ms-3">Babar Azam </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/1baus.jpg' %}"/>
+                              </div>
+                              <span class="ms-3">Mitchell Starc</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/2bnz.jpg' %}"/>
+                              </div>
+                              <span class="ms-3">Trent Boult </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="comon-tema d-flex align-items-center">
+                              <div class="pluo">
+                                <img alt="su" src="{% static 'cricketlive/images/1sa.png' %}"/>
+                              </div>
+                              <span class="ms-3">Quinton de Kock </span>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+
+                    <div class="most-playerd-vides d-inline-block w-100 mt-5">
+                      <h5>MORE LINKS </h5>
+                      <ul>
+                        <li>
+                          <a href="#" class="btn">
+                            <i class="fas fa-baseball-ball"></i>
+                            <span class="ms-3"> Contracted Players </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <i class="fas fa-baseball-ball"></i>
+                            <span class="ms-3"> Test Caps </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <i class="fas fa-baseball-ball"></i>
+                            <span class="ms-3"> WODI Caps </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <i class="fas fa-baseball-ball"></i>
+                            <span class="ms-3"> T20I Caps </span>
+                          </a>
+                        </li>
+
+                      </ul>
+                  </div>
+
+                </div>
+                <div class="col-lg-9">
+                    <div class="details-platyd">
+                        <h1 class="mt-0">{{data.longName}} </h1>
+                        <h3 class="mt-2">Team- {{data.country.name}} </h3>
+
+                        <div class="information-crm mt-3">
+                            <h4> Player Infomation </h4>
+                            <ul class="mt-4">
+                               <li>
+                                <span class="dert"> Batting styles </span>
+                                <span>{{data.longBattingStyles.0}}</span>
+                               </li>
+                               <li>
+                                <span class="dert">Bowling styles</span>
+                                <span>{{data.longBowlingStyles.0}}</span>
+                               </li>
+                               <li>
+                                <span class="dert">Playing role</span>
+                                <span>{{data.playingRoles.0}}</span>
+                               </li>
+                               <li>
+                                <span class="dert"> Playing Role </span>
+                                <span> {{data.playingRoles.0}}</span>
+                               </li>
+
+                               <li>
+                                <span class="dert"> Age </span>
+                                <span>{{age}}</span>
+                               </li>
+                               <li>
+                                <span class="dert"> Born </span>
+                                <span>{{data.dateOfBirth.date}}-{{data.dateOfBirth.month}}-{{data.dateOfBirth.year}}, {{data.country.name}}</span>
+                               </li>
+                               <li>
+                                <span class="dert"> Nationality </span>
+                                <span>{{data.country.name}}</span>
+                               </li>
+                               <li>
+                                <span class="dert"> career </span>
+                                <span>{{data.intlCareerSpan}}</span>
+                               </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <ul class="nav nav-pills mb-4 mt-5" role="tablist">
+                      <li class="nav-item ms-lg-0" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#statsb"
+                        type="button" role="tab">Stats</button>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#matchesb"
+                        type="button" role="tab">Matches</button>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="statsb" role="tabpanel">
+                        <div class="career-div01">
+                          <div class="accordion" id="accordionExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Batting Career Stats
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <div class="table-sectionss table-responsive">
+                                          <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Format</th>
+                                                  <th scope="col">Matches</th>
+                                                  <th scope="col">Innings</th>
+                                                  <th scope="col">&nbsp;Runs</th>
+                                                  <th scope="col">Highest score</th>
+                                                  <th scope="col">Average</th>
+                                                  <th scope="col">Strike Rate</th>
+                                                  <th scope="col">Bowls faced</th>
+                                                  <th scope="col">100s</th>
+                                                  <th scope="col">&nbsp;50s</th>
+                                                </tr>
+                                              </thead>
+                                              {% for baby in data6.stats %}
+                                              <tbody>
+                                                {% if forloop.counter == 1 %}
+                                                <tr>
+                                                  <td>Tests</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.in}}</td>
+                                                  <td>&nbsp;{{baby.rn}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.hs}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.avg}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.hn}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.ft}}</td>
+                                                </tr>
+                                                {% endif %}
+                                                {% if forloop.counter == 2 %}
+                                                <tr>
+                                                  <td>ODIs</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.in}}</td>
+                                                  <td>&nbsp;{{baby.rn}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.hs}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.avg}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.hn}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.ft}}</td>
+                                                </tr>
+                                                {% endif %}
+                                                {% if forloop.counter == 3 %}
+                                                <tr>
+                                                  <td>T20Is</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.in}}</td>
+                                                  <td>&nbsp;{{baby.rn}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.hs}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.avg}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.hn}}</td>
+                                                  <td>&nbsp;&nbsp;{{baby.ft}}</td>
+                                                </tr>
+                                                {% endif %}
+                                              </tbody>
+                                              {% endfor %}
+                                            </table>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Bowling Career Stats
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <div class="table-sectionss table-responsive">
+                                          <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Format</th>
+                                                  <th scope="col">Matches</th>
+                                                  <th scope="col">Innings</th>
+                                                  <th scope="col">&nbsp;Runs</th>
+                                                  <th scope="col">&nbsp;&nbsp;&nbsp;Balls</th>
+                                                  <th scope="col">Wickets</th>
+                                                  <th scope="col">&nbsp;Average</th>
+                                                  <th scope="col">&nbsp;&nbsp;Strike Rate</th>
+                                                  <th scope="col">&nbsp;Best</th>
+                                                  <th scope="col">&nbsp;Economy</th>
+                                                </tr>
+                                              </thead>
+                                              {% for baby in data6.stats %}
+                                              <tbody>
+                                                {% if forloop.counter == 7 %}
+                                                <tr>
+                                                  <td>Tests</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.in|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.rn|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.wk|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.avg|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.bbm|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bwe|default:"-"}}</td>
+                                                </tr>
+                                                {% endif %}
+                                                {% if forloop.counter == 8 %}
+                                                <tr>
+                                                  <td>ODIs</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.in|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.rn|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.wk|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.avg|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.bbm|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bwe|default:"-"}}</td>
+                                                </tr>
+                                                {% endif %}
+                                                {% if forloop.counter == 9 %}
+                                                <tr>
+                                                  <td>T20Is</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.mt|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.in|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.rn|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bl|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.wk|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.avg|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.sr|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{baby.bbm|default:"-"}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{baby.bwe|default:"-"}}</td>
+                                                </tr>
+                                                {% endif %}
+                                              </tbody>
+                                              {% endfor %}
+                                            </table>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      Career Overview Stats
+                                  </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <div class="table-sectionss">
+                                          <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Format</th>
+                                                  <th scope="col">Matches</th>
+                                                  <th scope="col">Innings</th>
+                                                  <th scope="col">&nbsp;Balls</th>
+                                                  <th scope="col">Runs</th>
+                                                  <th scope="col">Highest score</th>
+                                                  <th scope="col">100s</th>
+                                                  <th scope="col">50s</th>
+                                                  <th scope="col">6s</th>
+                                                  <th scope="col">&nbsp;4s</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>Batting Overview</td>
+                                                  <td>&nbsp;&nbsp;{{list1.0}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{list1.1}}</td>
+                                                  <td>{{list1.2}}</td>
+                                                  <td>{{list1.3}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list1.4}}</td>
+                                                  <td>&nbsp;&nbsp;{{list1.5}}</td>
+                                                  <td>{{list1.6}}</td>
+                                                  <td>{{list1.7}}</td>
+                                                  <td>{{list1.8}}</td>
+                                                </tr>
+                                              </tbody>
+                                          </table>
+                                          <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Format</th>
+                                                  <th scope="col">Matches</th>
+                                                  <th scope="col">Innings</th>
+                                                  <th scope="col">&nbsp;Runs</th>
+                                                  <th scope="col">&nbsp;&nbsp;&nbsp;Balls</th>
+                                                  <th scope="col">Wickets</th>
+                                                  <th scope="col">&nbsp;Best in inning</th>
+                                                  <th scope="col">&nbsp;&nbsp;Best in Match</th>
+                                                  <th scope="col">&nbsp;4W</th>
+                                                  <th scope="col">&nbsp;5W</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>Bowling Overview</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{list2.0}}</td>
+                                                  <td>&nbsp;&nbsp;{{list2.1}}</td>
+                                                  <td>&nbsp;&nbsp;{{list2.2}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;{{list2.3}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list2.4}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list2.5}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list2.6}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{list2.7}}</td>
+                                                  <td>&nbsp;&nbsp;&nbsp;{{list2.8}}</td>
+                                                </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="matchesb" role="tabpanel">
+                         <div class="comon-mtches01">
+                             <div class="tops-clk d-flex align-items-center justify-content-between">
+                                <h3>  ODI's MATCHES </h3>
+                                <div class="form-group">
+                                </div>
+                             </div>
+
+                             <hr/>
+                             <div class="comin-uy d-flex align-items-center">
+                                <div class="left-cu">
+                                   <h5> Debut </h5>
+                                </div>
+                                <div class="riugjt-viuy ps-4">
+                                    <p> {{list3.8}}  vs  {{list3.9}} at {{list3.10}} - <b> {{list3.11}} </b> </p>
+                                </div>
+                             </div>
+                             <div class="comin-uy d-flex align-items-center">
+                              <div class="left-cu">
+                                 <h5> Last </h5>
+                              </div>
+                              <div class="riugjt-viuy ps-4">
+                                  <p> {{list3.12}}  vs  {{list3.13}} at {{list3.14}} - <b> {{list3.15}} </b> </p>
+                              </div>
+                           </div>
+                         </div>
+
+                         <div class="comon-mtches01">
+                          <div class="tops-clk d-flex align-items-center justify-content-between">
+                             <h3>  T20 MATCHES </h3>
+                             <div class="form-group">
+                             </div>
+                          </div>
+
+                          <hr/>
+                          <div class="comin-uy d-flex align-items-center">
+                             <div class="left-cu">
+                                <h5> Debut </h5>
+                             </div>
+                             <div class="riugjt-viuy ps-4">
+                                 <p> {{list3.16}}  vs  {{list3.17}} at {{list3.18}} - <b> {{list3.19}} </b> </p>
+                             </div>
+                          </div>
+                          <div class="comin-uy d-flex align-items-center">
+                           <div class="left-cu">
+                              <h5> Last </h5>
+                           </div>
+                           <div class="riugjt-viuy ps-4">
+                               <p> {{list3.20}}  vs  {{list3.21}} at {{list3.22}} - <b> {{list3.23}} </b> </p>
+                           </div>
+                        </div>
+                      </div>
+
+                         <div class="comon-mtches01">
+                          <div class="tops-clk d-flex align-items-center justify-content-between">
+                             <h3>  TEST MATCHES </h3>
+                             <div class="form-group">
+                             </div>
+                          </div>
+
+                          <hr/>
+                          <div class="comin-uy d-flex align-items-center">
+                             <div class="left-cu">
+                                <h5> Debut </h5>
+                             </div>
+                             <div class="riugjt-viuy ps-4">
+                                 <p> {{list3.0}}  vs  {{list3.1}} at {{list3.2}} - <b> {{list3.3}} </b> </p>
+                             </div>
+                          </div>
+                          <div class="comin-uy d-flex align-items-center">
+                           <div class="left-cu">
+                              <h5> Last </h5>
+                           </div>
+                           <div class="riugjt-viuy ps-4">
+                               <p> {{list3.4}}  vs  {{list3.5}} at {{list3.6}} - <b> {{list3.7}} </b> </p>
+                           </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</section>
+{% endblock content %}
+{% block js %}
+<script>
+  $(document).ready(function(){
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+    id      = $(this).attr("id"),
+    name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function() {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+  template += '</div></div>';
+
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+});
+</script>
+{% endblock js %}

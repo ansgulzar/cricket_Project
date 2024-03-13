@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <title>Cricket - Matches Details </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'cricketlive/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,700&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <link href="{% static 'cricketlive/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'cricketlive/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'cricketlive/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'cricketlive/css/owl.theme.default.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'cricketlive/css/animate.min.css' %}"/>
+    <link rel="stylesheet" type="{% static 'cricketlive/css/jquery.fancybox.min.css' %}"/>
+      <style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+    }
+    .styled-table thead tr {
+        background-color: #FFC72C;
+        color: black;
+        text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+    .styled-table tbody tr:nth-last-child(1) {
+        background-color: #FFC72C; /* Green for the last row */
+    }
+
+    .styled-table tbody tr:nth-last-child(2) {
+        background-color: black; /* Black for the second-last row */
+        color: white;
+    }
+
+    .styled-table tbody tr:nth-last-child(3) {
+        background-color: #F0E68C; /* Yellow for the third-last row */
+    }
+     @media only screen and (max-width: 768px) {
+        .styled-table {
+            font-size: 0.7em; /* Further decrease text size on smaller screens */
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 6px 8px; /* Further reduce padding on smaller screens */
+        }
+    }
+    </style>
+      <style>
+          header .navbar {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+      </style>
+  </head>
+
+<body>
+{% for match in data4 %}
+  <header class="float-start w-100">
+    <div class="top-new-heda d-none d-lg-inline-block w-100">
+     <div class="container">
+       <div class="row row-cols-2 align-items-center">
+           <div class="col">
+              <ul class="left-oiu">
+               <li>
+                 <a href="#">
+                    <img alt="tn" src="{% static 'cricketlive/images/wcw.png' %}"/>
+                 </a>
+                 <a href="#" class="ms-4">
+                   <img alt="tn" src="{% static 'cricketlive/images/wpl-logo.svg' %}"/>
+                 </a>
+               </li>
+              </ul>
+           </div>
+           <div class="col d-grid justify-content-end">
+              <ul class="top-socli d-flex align-items-center">
+
+              </ul>
+           </div>
+       </div>
+     </div>
+    </div>
+     <nav class="navbar navbar-expand-lg navbar-light">
+       <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img style="width: 100px; height: auto;" src="{% static 'cricketlive/images/logo(9).png' %}" alt="logo"/>
+        </a>
+         
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'match' %}">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'videos' %}">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'stats' %}">Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'news' %}">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teams' %}">Teams</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="{% url 'standing' pk=match.league_key %}"> Standings </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'live' %}">Live</a>
+            </li>
+          </ul>
+         </div>
+         <div class="right-top">
+           <ul class="d-flex align-items-center">
+             <li class="dropdown position-relative">
+               <ul class="dropdown-menu shadow cart-dropdown-ne" >
+                 <li>
+                 </li>
+               </ul>
+             </li>
+             <li>
+               <button type="button" class="btn bar-btn-links" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightmobile">
+                  <span>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-fill" viewBox="0 0 16 16">
+                     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
+                   </svg>
+                  </span>
+               </button>
+              </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+    </header>
+ 
+<section class="banner-part sub-main-banner float-start w-100">
+     
+          <div class="baner-imghi">
+             <img src="{% static 'cricketlive/images/sub-banner01.jpg' %}" alt="sub-banner"/>
+          </div>
+
+            <div class="sub-banner">
+                <div class="container">
+                    <h1 class="text-center"> Match Details</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Match Details</li>
+                        </ol>
+                    </nav>
+               </div>
+            </div>
+
+   
+
+</section>
+
+<section class="float-start w-100 mtches-divbnh01 body-part pt-0">
+   
+  <div class="next-matches d-inline-block w-100">
+    <div class="container">
+
+          <h1 class="main-hed01"> Next Match </h1>
+
+      <div class="comon-results-div">
+          <div class="leag-name text-center">
+            <h2>{{match.league_name}} </h2>
+            
+            
+          </div>
+          <div class="bodyu-divbn">
+            <h4 class="text-center text-white"> <span>{{match.event_home_team}}</span> <span class="text-white mx-4"> VS </span> <span> {{match.event_away_team}} </span>  </h4>
+            <span class="btn time-d05 d-table mx-auto"> {{match.event_date_start}} </span>
+            <h6 class="text-center text-white"> {{match.event_time}} </h6>
+           
+
+            <div class="row align-items-center">
+              <div class="col-5">
+                <div class="club-items d-flex align-items-center">
+                    <figure class="m-0">
+                        <img src="{{match.event_home_team_logo}}" alt="bn"/>
+                    </figure>
+                    <h5 class="ms-3">{{match.event_home_team}}
+                      <span class="d-block">{{match.event_away_team}}</span>
+                    </h5>
+                </div>
+              </div>
+
+              <div class="col-2">
+                <div class="d-none d-lg-block">
+                  <div class="vds-resut text-center">
+                 
+                    <div class="watch-div">
+                       <a href="#" class="btn btn-wtch1">
+                        <i class="fas fa-play"></i>  Watch Stream
+                         
+                       </a>
+                       <p class="mt-2 text-white"> Stadium: {{match.event_stadium}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-block d-lg-none">
+                   <h3 class="text-white text-center">VS</h3>
+                </div>
+               
+              </div>
+
+              <div class="col-5">
+                <div class="club-items d-flex align-items-center">
+                    <figure class="m-0">
+                        <img src="{{match.event_away_team_logo}}" alt="bn"/>
+                    </figure>
+                    <h5> {{match.event_home_team}}
+                      <span class="d-block">{{match.event_away_team}}</span>
+                    </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-lg-none d-block">
+              <div class="vds-resut text-center my-4">
+                <div class="golas-divb mb-2">
+                    <h3>{{match.event_time}}</h3>
+                </div>
+                <div class="watch-div">
+                   <a href="#" class="btn btn-wtch1">
+                    <i class="fas fa-play"></i> Match Highligt
+                   </a>
+                   <p class="mt-2 text-white"> <i class="fas fa-map-marker-alt"></i>{{match.event_stadium}}</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+
+         
+        </div>
+
+    </div>
+</div>
+
+      <div class="detaisl-matecchs">
+         <div class="container">
+            
+
+            <div class="detsils-ivbn mt-4 col-lg-10 p-5 mx-auto bg-light d-table">
+               
+                    <h1 class="main-hed01"> Match Details </h1>
+    
+                <div class="jsm mt-5">
+                    <ul>
+                        <li>
+                            <span class="d-block"> Date: </span>
+                            {{match.event_date_start}}
+                        </li>
+                        <li>
+                            <span class="d-block"> Time: </span>
+                            {{match.event_time}}
+                        </li>
+                        <li>
+                            <span class="d-block"> Event Category: </span>
+                            {{match.event_type}}
+                        </li>
+
+                        <li>
+                            <span class="d-block"> Toss: </span>
+                            {{match.event_toss}}
+                        </li>
+
+                        <li>
+                            <span class="d-block"> Stadium: </span>
+                            {{match.event_stadium}}
+                        </li>
+
+                        <li>
+                            <span class="d-block"> Match Status: </span>
+                            {{match.event_status_info}}
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <div class="matches-seduels d-inline-block w-100">
+          <div class="container">
+              <h1>Pakistan</h1>
+              {% for team, innings_list in match.scorecard.items %}
+                {% if forloop.first %}
+                    {% if innings_list %}
+                      <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>BATSMAN</th>
+                                <th></th>
+                                <th>RUNS</th>
+                                <th>BALLS</th>
+                                <th>4S</th>
+                                <th>6S</th>
+                                <th>SR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for team, innings_list in match.scorecard.items %}
+                                {% if forloop.first %}
+                                    {% for innings in innings_list %}
+                                        {% if innings.type == 'Batsman' %}
+                                            <tr>
+                                                <td>{{innings.player}}</td>
+                                                <td>{{innings.status}}</td>
+                                                <td>{{innings.R}}</td>
+                                                <td>{{innings.B}}</td>
+                                                <td>{{innings.4s}}</td>
+                                                <td>{{innings.6S}}</td>
+                                                <td>{{innings.SR}}</td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            <tr class="inning-extras-row">
+                                {% for team, innings_list in match.extra.items %}
+                                    {% if forloop.first %}
+                                        {% for innings in innings_list %}
+                                            <td>Extras</td>
+                                            <td>{{innings.text}}</td>
+                                            <td>
+                                                <strong style="color:#fff;">{{innings.nr}}</strong>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                            <tr class="inning-total-row">
+                                {% for team, innings_list in match.extra.items %}
+                                    {% if forloop.first %}
+                                        {% for innings in innings_list %}
+                                            <td>
+                                                <div>Innings Total</div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                            <td style="font-weight:bold">
+                                                <div>{{innings.total}}</div>
+                                            </td>
+                                            <td>{{innings.total_overs}}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                      </table>
+                    {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% for team, innings_list in match.wickets.items %}
+                {% if forloop.first %}
+                    {% if innings_list %}
+                      <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>FALL OF WICKET</th>
+                                <th>Bowler</th>
+                                <th>BALLS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for team, innings_list in match.wickets.items %}
+                                {% if forloop.first %}
+                                    {% for innings in innings_list %}
+                                        <tr>
+                                            <td>{{innings.fall}}</td>
+                                            <td>{{innings.batsman}}</td>
+                                            <td>{{innings.score}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                      </table>
+                    {% endif %}
+                {% endif %}
+              {% endfor %}
+
+
+              {% for team, innings_list in match.scorecard.items %}
+                {% if forloop.counter == 2 %}
+                    {% if innings_list %}
+                      <h1>Australia</h1>
+                      <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>BATSMAN</th>
+                                <th></th>
+                                <th>RUNS</th>
+                                <th>BALLS</th>
+                                <th>4S</th>
+                                <th>6S</th>
+                                <th>SR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for team, innings_list in match.scorecard.items %}
+                                {% if forloop.counter == 2 %}
+                                    {% for innings in innings_list %}
+                                         {% if innings.type == 'Batsman' %}
+                                            <tr>
+                                                <td>{{innings.player}}</td>
+                                                <td>{{innings.status}}</td>
+                                                <td>{{innings.R}}</td>
+                                                <td>{{innings.B}}</td>
+                                                <td>{{innings.4s}}</td>
+                                                <td>{{innings.6S}}</td>
+                                                <td>{{innings.SR}}</td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            <tr class="inning-extras-row">
+                                {% for team, innings_list in match.extra.items %}
+                                    {% if forloop.counter == 2 %}
+                                        {% for innings in innings_list %}
+                                                <td>Extras</td>
+                                                <td>{{innings.text}}</td>
+                                                <td>
+                                                    <strong style="color:#fff;">{{innings.nr}}</strong>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                            <tr class="inning-total-row">
+                                {% for team, innings_list in match.extra.items %}
+                                    {% if forloop.counter == 2 %}
+                                        {% for innings in innings_list %}
+                                            <td>
+                                                <div>Innings Total</div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                            <td style="font-weight:bold">
+                                                <div>{{innings.total}}</div>
+                                            </td>
+                                            <td>{{innings.total_overs}}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                      </table>
+                    {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% for team, innings_list in match.wickets.items %}
+                {% if forloop.counter == 2 %}
+                    {% if innings_list %}
+                      <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>FALL OF WICKET</th>
+                                <th>Bowler</th>
+                                <th>BALLS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for team, innings_list in match.wickets.items %}
+                                {% if forloop.counter == 2 %}
+                                    {% for innings in innings_list %}
+                                        <tr>
+                                            <td>{{innings.fall}}</td>
+                                            <td>{{innings.batsman}}</td>
+                                            <td>{{innings.score}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                      </table>
+                    {% endif %}
+                {% endif %}
+              {% endfor %}
+
+                
+                <h1 class="main-hed01"> Stadium  Location </h1>
+            
+
+            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12144.017759916967!2d-3.6883337!3d40.4530387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8fff6d26e2b1988!2sSantiago%20Bernab%C3%A9u%20Stadium!5e0!3m2!1sen!2sin!4v1661437221958!5m2!1sen!2sin"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+           
+          </div>
+      </div>
+
+
+      <div class="both-players-div my-5 d-inline-block w-100">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2 g-lg-5">
+                 <div class="col">
+                    <div class="tem-payers">
+                        <h3 class="comon-heading mt-0 mb-3"> {{match.event_home_team}} </h3>
+
+                        <div class="comon-tema-n">
+                                {% for team, innings_list in match.lineups.items %}
+                                  {% if forloop.first %}
+                                    {% for player in innings_list.starting_lineups %}
+                                        <div class="playssm">
+                                            <div class="d-flex align-items-start">
+                                                <span class="js-no1">{{ forloop.counter }}</span>
+                                                <h5 class="m-0 ms-4"> {{player.player}}</h5>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                  {% endif %}
+                                {% endfor %}
+<!--                           <div class="playssm">-->
+<!--                              <div class="d-flex align-items-start">-->
+<!--                                  <span class="js-no1">09</span>-->
+<!--                                  <h5 class="m-0 ms-4"> John Montgomery-->
+<!--                                  </h5>-->
+<!--                              </div>-->
+<!--                             -->
+<!--                             <span> <i class="fas fa-mitten"></i> </span>-->
+<!--                           </div>-->
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col">
+                  <div class="tem-payers mt-5 mt-lg-0">
+                      <h3 class="comon-heading mt-0 mb-3"> {{match.event_away_team}} </h3>
+
+                      <div class="comon-tema-n">
+                         {% for team, innings_list in match.lineups.items %}
+                            {% if forloop.counter == 2 %}
+                                {% for player in innings_list.starting_lineups %}
+                                    <div class="playssm">
+                                        <div class="d-flex align-items-start">
+                                            <span class="js-no1">{{ forloop.counter }}</span>
+                                            <h5 class="m-0 ms-4"> {{player.player}}</h5>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                         {% endfor %}
+
+<!--                         <div class="playssm">-->
+<!--                            <div class="d-flex align-items-start">-->
+<!--                                <span class="js-no1">50</span>-->
+<!--                                <h5 class="m-0 ms-4"> Joe Perez-->
+<!--                                 <span class="d-block"> Defernder</span>-->
+<!--                                </h5>-->
+<!--                            </div>-->
+<!--                           -->
+<!--                           <span> <i class="fas fa-Cricket-ball"></i> </span>-->
+<!--                         </div>-->
+                      </div>
+
+                  </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<footer class="float-start w-100">
+  <div class="container">
+   <div class="topls-paly d-inline-block">
+     <h5 class="text-white"> Trending Players </h5>
+     <ul>
+       <li>
+         <a href="{% url 'player_details' pk=348144 %}" class="btn"> Babar Azam </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=253802 %}" class="btn"> Virat Kohli</i></a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=446507 %}" class="btn"> Suryakumar yadav</a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=325026 %}" class="btn"> Glen Maxwell </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=34102 %}" class="btn"> Rohit Sharma </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=530011 %}" class="btn"> Travis Head </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=959767 %}" class="btn"> Rachin Ravindra </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=219889 %}" class="btn">  David Warner </a>
+       </li>
+       <li>
+         <a href="{% url 'player_details' pk=379143 %}" class="btn"> Quinton de Kock </a>
+       </li>
+     </ul>
+   </div>
+
+   <hr/>
+     <div class="row row-cols-1 row-cols-lg-4">
+         <div class="col">
+            <div class="comonft-sec d-inline-block w-100">
+                <h5 class="text-white"> Team </h5>
+                <ul>
+                 <li>
+                   <a href="#"> Australia </a>
+                 </li>
+                 <li>
+                   <a href="#"> England </a>
+                 </li>
+                 <li>
+                   <a href="#"> India </a>
+                 </li>
+                 <li>
+                   <a href="#"> New Zealand </a>
+                 </li>
+                 <li>
+                   <a href="#"> South Africa </a>
+                 </li>
+                 <li>
+                   <a href="#"> Sri Lanka </a>
+                 </li>
+                 <li>
+                   <a href="#"> Afghanistan </a>
+                 </li>
+                </ul>
+            </div>
+         </div>
+
+         <div class="col">
+           <div class="comonft-sec d-inline-block w-100">
+               <h5 class="text-white"> About </h5>
+                  <ul>
+                    <li class="active-m">
+                      <a href="{% url 'home' %}"> Home </a>
+                    </li>
+                    <li class="active-m">
+                      <a href="{% url 'about' %}"> About </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'match' %}">  Matches  </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'videos' %}"> Videos </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'stats' %}">Stats</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'news' %}">News</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'teams' %}">Teams</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'live' %}"> Live </a>
+                    </li>
+                  </ul>
+           </div>
+         </div>
+
+
+         <div class="col d-grid justify-content-lg-end">
+           <div class="comonft-sec d-inline-block w-100">
+               <h5 class="text-white"> Support </h5>
+               <ul>
+                <li>
+                  <a href="#"> Help Center </a>
+                </li>
+                <li>
+                  <a href="#"> Privacy & Policy </a>
+                </li>
+                <li class="mt-4">
+                 <a href="#" class="fl"> 
+                   <img alt="st" src="{% static 'cricketlive/images/appleo.jpg' %}">
+                 </a>
+                </li>
+                <li>
+                 <a href="#" class="fl"> 
+                   <img alt="st" src="{% static 'cricketlive/images/go.jpg' %}">
+                 </a>
+                </li>
+
+               
+               </ul>
+           </div>
+         </div>
+     </div>
+  </div>
+
+  <div class="footer-div1 mt-4">
+   <div class="container">
+     <div class="row row-cols-1 row-cols-lg-2 text-center text-lg-start gy-4 gy-lg-0 justify-content-center justify-content-lg-between">
+         <div class="col">
+           <p class="text-white"> Copyright © 2023.All Rights Reserved </p>
+         </div>
+         <div class="col d-grid justify-content-lg-end">
+           <ul>
+             <li>
+               <a href="#"> Privacy Policy </a>
+               <a href="#"> Term Of Service </a>
+               <a href="#">Disclaimer </a>
+             </li>
+           </ul>
+         </div>
+     </div>
+
+   </div>
+ </div>
+</footer>
+
+<div class="modal fade login-div-modal" id="memberModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="index.html" method="get">
+            <div class="com-div-md">
+
+              <div class="login-modal-pn">
+              
+              <div class="cm-select-login mt-0">
+                <div class="country-dp">
+                  
+                  <input type="text" name="fullname" class="form-control" placeholder="Full Name" required/>
+                </div>
+                <div class="phone-div">
+                  
+                    <input type="email" name="phone" class="form-control" placeholder="Email or Phone Number" required/>
+                </div>
+                <div class="phone-div">
+              
+                  <input type="password" name="password" class="form-control" placeholder="Create Password" required/>
+                </div>
+                <div class="phone-div">
+              
+                  <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password" required/>
+                </div>
+                
+                <div class="forget2 mt-3 ml-3 d-flex justify-content-between">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"> By clicking Register, you agree to our
+                      Terms of Use
+                      and
+                      Cookie Policy</label>
+                </div>
+              
+              </div>
+              
+              
+              
+              <button type="submit" name="submit" class="btn continue-bn"> Register </button>
+            </div>
+
+              <p class="text-center  mt-3"> Do not have an account? 
+                <a data-bs-toggle="modal" class="regster-bn" data-bs-target="#loginModal" data-bs-dismiss="modal"> Login </a>  </p>
+            </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-end" id="offcanvasRightmobile" >
+  <div class="offcanvas-header py-0">
+    <button type="button" class="close-menu mt-4" data-bs-dismiss="offcanvas" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="head-contact d-none d-lg-block">
+        <a href="index.html" class="logo-side">
+           <img src="{% static 'cricketlive/images/logo.png' %}" alt="logo">
+        </a>
+        <p class="mt-4" style="text-align: justify;"> Welcome to <b>6s Cricket</b>, your ultimate destination for all things cricket! We're here to make your cricket experience exciting and accessible. Watch live matches, stay updated with scores, and explore in-depth team details. Dive into the world of cricket news, relish highlights through videos, and check out player stats. At <b>6s Cricket</b>, we're passionate about cricket, and our goal is to bring that passion to you in a simple, enjoyable way. Join us in celebrating the thrill of the game as we connect cricket enthusiasts worldwide.
+        </p>
+        <div class="quick-link my-4">
+          <ul>
+          </ul>
+        </div>
+        <ul class="side-media">
+        </ul>
+     </div>
+     
+     <div class="head-contact d-block d-lg-none">
+        <a href="{% url 'home' %}" class="logo-side">
+          <img style="width: 100px; height: auto;" src="{% static 'cricketlive/images/logo(9).png' %}" alt="logo"/>
+        </a>
+       
+        <div class="mobile-menu-sec mt-3">
+          <ul>
+            <li class="active-m">
+              <a href="{% url 'home' %}"> Home </a>
+            </li>
+            <li class="active-m">
+              <a href="{% url 'about' %}"> About </a>
+            </li>
+            <li>
+              <a href="{% url 'match' %}">  Matches  </a>
+            </li>
+            <li>
+              <a href="{% url 'videos' %}"> Videos </a>
+            </li>
+            <li>
+              <a href="{% url 'stats' %}">Stats</a>
+            </li>
+            <li>
+              <a href="{% url 'news' %}">News</a>
+            </li>
+            <li>
+              <a href="{% url 'teams' %}">Teams</a>
+            </li>
+            <li>
+              <a href="{% url 'live' %}"> Live </a>
+            </li>
+          </ul>
+      </div>
+        <div class="quick-link">
+          <ul>
+            <li> <i class="fab fa-whatsapp"></i> <span> 180-250-9625 </span>  </li>
+            <li> <i class="bi bi-envelope"></i> <span> example@gmail.com</span> </li>
+          </ul>
+        </div>
+        <ul class="side-media">
+         <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+         <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+         <li> <a href="#"> <i class="fab fa-google-plus-g"></i> </a> </li>
+         <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+      </ul>
+     </div>
+  </div>
+</div>
+
+
+<div class="modal fade login-div-modal" id="lostpsModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="index.html" method="get">
+            <div class="com-div-md">
+              <h5 class="text-center mb-3"> Forget Your Password? </h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+              <div class="login-modal-pn">
+              <p> We'll email you a link to reset your password</p>
+              <div class="cm-select-login mt-3">
+                
+                <div class="phone-div">
+                  
+                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
+                </div>
+                
+              
+              </div>
+              
+              
+              
+              <button type="submit" class="btn continue-bn"> Send Me a password reset Link </button>
+            </div>
+
+            </div>
+        </form>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade login-div-modal" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+
+         <form action="index.html" method="get">
+            <div id="login-td-div" class="com-div-md">
+            
+              <h5 class="text-center mb-3"> Login </h5>
+              <button type="button" class="close" data-bs-dismiss="modal">
+              <span>×</span>
+            </button>
+              <div class="login-modal-pn">
+              
+              <div class="cm-select-login mt-3">
+                <div class="country-dp">
+                  
+                  <input type="email" name="user" class="form-control" placeholder="Username Or Email" required />
+                </div>
+                <div class="phone-div">
+                  
+                    <input type="password" name="password" class="form-control" placeholder="Password" required />
+                </div>
+                
+              
+              </div>
+              
+              
+              
+              <button type="submit" name="submit" class="btn continue-bn"> <i class="fas fa-lock"></i> SIGN IN </button>
+            </div>
+
+            <p class="text-center  mt-3">  
+              <a data-bs-toggle="modal" class="regster-bn" data-bs-target="#lostpsModal" data-bs-dismiss="modal"> Lost Password ? </a>  </p>
+              
+              
+              <p class="text-center  mt-3"> Do not have an account? 
+                <a data-bs-toggle="modal" class="regster-bn" data-bs-target="#memberModal" data-bs-dismiss="modal"> Register </a>  </p>
+            </div>
+         </form>
+      
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+<script src="{% static 'cricketlive/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'cricketlive/js/jquery.min.js' %}"></script>
+<script src="{% static 'cricketlive/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'cricketlive/js/jquery.fancybox.min.js' %}"></script>
+
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap5.min.js"></script>
+ 
+{% block js %}
+<script>
+// Reload the page after 30 seconds
+setTimeout(function() {
+    window.location.reload(true);
+}, 30000); // 30 seconds = 30000 milliseconds
+</script>
+{% endblock js %}
+</body>
+</html>

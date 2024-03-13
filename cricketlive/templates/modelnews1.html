@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}News{% endblock title %}
+{% block image_bar1 %}News{% endblock image_bar1 %}
+{% block image_bar2 %}News{% endblock image_bar2 %}
+{% block content %}
+<section class="float-start w-100 body-part pt-0">
+    <div class="comondubt-page d-inline-block w-100">
+        <div class="container">
+            <h2 class="main-hed01 mb-4"> Cricket News</h2>
+            <div class="row gy-4 g-lg-5">
+                <div class="col-lg-8">
+                    {% for item in items %}
+                        <a href="{% url 'news_details' pk=item.id %}" class="comon-potinm d-inline-block w-100 mt-0">
+                            <div class="row">
+                               <div class="col-md-4">
+                                <div class="posu-img01">
+                                    <img alt="su" src="{{item.poster}}"/>
+                                </div>
+                               </div>
+                               <div class="col-md-8">
+                                  <h5> {{item.title}}</h5>
+                                   <p>{{item.subtitle}}</p>
+                                  <div class="d-flex align-items-center">
+                                    <div class="admin-t">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffa52c" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                                        &nbsp;&nbsp;&nbsp;<span style="text-align: left"> By Admin </span>
+                                    </div>
+                                    <div class="admin-t">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffac1c" d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z"/></svg>
+                                        <span style="text-align: left"> {{item.date}} </span>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-4">
+                   <div class="comon-sec-blogs-inf-right">
+                    <h5> Most Read </h5>
+                       {% for item in items|slice:":3" %}
+                      <a href="{% url 'news_details' pk=item.id %}" class="como-list blogs-ioj d-flex align-items-center">
+                        <figure>
+                            <img alt="ju" src="{{item.poster}}">
+                        </figure>
+                        <div class="textry">
+                            <h5> {{item.title}} </h5>
+                            <p> {{item.date}} <span> Author</span> </p>
+                        </div>
+                      </a>
+                       {% endfor %}
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
