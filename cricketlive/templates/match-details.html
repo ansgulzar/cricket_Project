@@ -328,7 +328,7 @@
 
       <div class="matches-seduels d-inline-block w-100">
           <div class="container">
-              <h1>Pakistan</h1>
+              <h1>{{match.event_home_team}}</h1>
               {% for team, innings_list in match.scorecard.items %}
                 {% if forloop.first %}
                     {% if innings_list %}
@@ -441,7 +441,7 @@
               {% for team, innings_list in match.scorecard.items %}
                 {% if forloop.counter == 2 %}
                     {% if innings_list %}
-                      <h1>Australia</h1>
+                      <h1>{{match.event_away_team}}</h1>
                       <table class="styled-table">
                         <thead>
                             <tr>
@@ -1001,14 +1001,6 @@
 <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap5.min.js"></script>
- 
-{% block js %}
-<script>
-// Reload the page after 30 seconds
-setTimeout(function() {
-    window.location.reload(true);
-}, 30000); // 30 seconds = 30000 milliseconds
-</script>
-{% endblock js %}
+
 </body>
 </html>

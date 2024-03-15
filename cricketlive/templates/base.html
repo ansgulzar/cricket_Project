@@ -188,25 +188,25 @@
                 <h5 class="text-white"> Team </h5>
                 <ul>
                  <li>
-                   <a href="#"> Australia </a>
+                   <a href="{% url 'teams_details' pk=5 %}"> Australia </a>
                  </li>
                  <li>
-                   <a href="#"> England </a>
+                   <a href="{% url 'teams_details' pk=6 %}"> England </a>
                  </li>
                  <li>
-                   <a href="#"> India </a>
+                   <a href="{% url 'teams_details' pk=1 %}"> India </a>
                  </li>
                  <li>
-                   <a href="#"> New Zealand </a>
+                   <a href="{% url 'teams_details' pk=8 %}"> New Zealand </a>
                  </li>
                  <li>
-                   <a href="#"> South Africa </a>
+                   <a href="{% url 'teams_details' pk=7 %}"> South Africa </a>
                  </li>
                  <li>
-                   <a href="#"> Sri Lanka </a>
+                   <a href="{% url 'teams_details' pk=4 %}"> Sri Lanka </a>
                  </li>
                  <li>
-                   <a href="#"> Afghanistan </a>
+                   <a href="{% url 'teams_details' pk=9 %}"> Afghanistan </a>
                  </li>
                 </ul>
             </div>
@@ -278,7 +278,7 @@
    <div class="container">
      <div class="row row-cols-1 row-cols-md-2 text-center text-md-start gy-4 gy-lg-0 justify-content-center justify-content-md-between">
          <div class="col">
-           <p class="text-white"> Copyright © 2023.All Rights Reserved </p>
+           <p class="text-white"> Copyright © 2024.All Rights Reserved </p>
          </div>
          <div class="col d-grid justify-content-lg-end">
            <ul>
@@ -308,7 +308,7 @@
   <div class="offcanvas-body">
     <div class="head-contact d-none d-lg-block">
         <a href="index.html" class="logo-side">
-           <img src="{% static 'cricketlive/images/logo.png' %}" alt="logo">
+           <img width="80px" src="{% static 'cricketlive/images/logo(9).png' %}" alt="logo">
         </a>
         <p class="mt-4" style="text-align: justify;"> Welcome to <b>6s Cricket</b>, your ultimate destination for all things cricket! We're here to make your cricket experience exciting and accessible. Watch live matches, stay updated with scores, and explore in-depth team details. Dive into the world of cricket news, relish highlights through videos, and check out player stats. At <b>6s Cricket</b>, we're passionate about cricket, and our goal is to bring that passion to you in a simple, enjoyable way. Join us in celebrating the thrill of the game as we connect cricket enthusiasts worldwide.
         </p>
