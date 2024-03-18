@@ -178,3 +178,4 @@ CSRF_TRUSTED_ORIGINS = ['https://six6s.cricket']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # LOGIN_REDIRECT_URL = '/data/'
+CSRF_TRUSTED_ORIGINS = ['https://six6s.cricket']
