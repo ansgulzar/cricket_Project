@@ -12,7 +12,8 @@ from django.contrib.auth.forms import AuthenticationForm, UsernameField
 from django.contrib.auth import authenticate, login, logout
 from .forms import VideoUploadForm, NewsForm, LiveForm
 import time
-
+from django.shortcuts import redirect
+from django.urls import reverse
 
 def testing(request):
     return render(request, "child1.html")
@@ -126,7 +127,8 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect('/home/')
+    return redirect(reverse('home'))
+    # return HttpResponseRedirect('/home/')
 
 
 def news(request):
